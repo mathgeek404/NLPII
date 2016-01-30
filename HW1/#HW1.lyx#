@@ -1,0 +1,1708 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.5in
+\topmargin 0.5in
+\rightmargin 0.5in
+\bottommargin 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Problem 1
+\end_layout
+
+\begin_layout Standard
+1) Intersection of convex sets is convex: Proof
+\end_layout
+
+\begin_layout Standard
+Let some 2 convex sets 
+\begin_inset Formula $C_{1},C_{2}$
+\end_inset
+
+ be given.
+ Consider 
+\begin_inset Formula $C_{1}\cap C_{2}$
+\end_inset
+
+ and let some points 
+\begin_inset Formula $x,y\in C_{1}\cap C_{2}$
+\end_inset
+
+ be given.
+ Because 
+\begin_inset Formula $x,y\in C_{1}$
+\end_inset
+
+, we know then that, 
+\begin_inset Formula $\forall\lambda\in[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $(1-\lambda)x+\lambda y\in C_{1}$
+\end_inset
+
+ from convexity.
+ And because 
+\begin_inset Formula $x,y\in C_{2}$
+\end_inset
+
+, we know then that, 
+\begin_inset Formula $\forall\lambda\in[0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $(1-\lambda)x+\lambda y\in C_{2}$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\forall\lambda\in[0,1],(1-\lambda)x+\lambda y\in C_{1}\cap C_{2}$
+\end_inset
+
+.
+ Because this was for any arbitrary 
+\begin_inset Formula $x,y\in C_{1}\cap C_{2}$
+\end_inset
+
+, we see that 
+\begin_inset Formula $C_{1}\cap C_{2}$
+\end_inset
+
+ is also convex.
+\end_layout
+
+\begin_layout Standard
+2) Union of convex sets is convex: Counterexample
+\end_layout
+
+\begin_layout Section*
+Problem 2
+\end_layout
+
+\begin_layout Section*
+Problem 3
+\end_layout
+
+\begin_layout Standard
+Let some nonempty convex set S be given.
+ First, we shall show the interior of a convex set is convex.
+ So let some elements 
+\begin_inset Formula $x,y\in int(S)$
+\end_inset
+
+ be given.
+ Now let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given.
+ We want to show that 
+\begin_inset Formula $\lambda x+(1-\lambda)y\in int(S)$
+\end_inset
+
+.
+ Trivially, this is true for 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+ (since 
+\begin_inset Formula $x,y\in int(S)$
+\end_inset
+
+ by definition), so consider the case where 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+.
+ Set the point 
+\begin_inset Formula $z=\lambda x+(1-\lambda)y$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $x,y\in S$
+\end_inset
+
+, we see that 
+\begin_inset Formula $z\in S$
+\end_inset
+
+ by convexity.
+ Because 
+\begin_inset Formula $x,y\in int(S)$
+\end_inset
+
+, we can choose some open balls of respective radius 
+\begin_inset Formula $\epsilon_{1},\epsilon_{2}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $Ball_{\epsilon_{1}}(x)\subset S$
+\end_inset
+
+ and 
+\begin_inset Formula $Ball_{\epsilon_{2}}(y)\subset S$
+\end_inset
+
+ (i.e.
+ open balls which are contained in S) by definition of interior.
+ So set 
+\begin_inset Formula $\epsilon=min(\epsilon_{1},\epsilon_{2})$
+\end_inset
+
+.
+ Clearly, 
+\begin_inset Formula $Ball_{\epsilon}(x)\subset S$
+\end_inset
+
+ and 
+\begin_inset Formula $Ball_{\epsilon}(y)\subset S$
+\end_inset
+
+ since we are just taking a ball of the same or smaller radius.
+ 
+\end_layout
+
+\begin_layout Standard
+To show that 
+\begin_inset Formula $z\in int(S)$
+\end_inset
+
+, we would like to show that we can create an open ball of radius 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ around z contained within S.
+ So let some element 
+\begin_inset Formula $z^{*}\in Ball_{\epsilon}(z)$
+\end_inset
+
+ be given.
+ Notice that 
+\begin_inset Formula $\left\Vert z^{*}-z\right\Vert _{2}<\epsilon$
+\end_inset
+
+ since 
+\begin_inset Formula $z^{*}$
+\end_inset
+
+ was chosen from the open ball of radius 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, so it readily follows that 
+\begin_inset Formula $x+(z^{*}-z)\in Ball_{\epsilon}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $y+(z^{*}-z)\in Ball_{\epsilon}(y)$
+\end_inset
+
+.
+ Because those balls contained in S, 
+\begin_inset Formula $x+(z^{*}-z),y+(z^{*}-z)\in S$
+\end_inset
+
+ and thus by convexity: 
+\begin_inset Formula $\lambda(x+(z^{*}-z))+(1-\lambda)(y+(z^{*}-z))\in S$
+\end_inset
+
+.
+ Substituting our definition of z and expanding: 
+\begin_inset Formula $\lambda(x+z^{*}-z)+(1-\lambda)(y+z^{*}-z)=\lambda(x+z^{*}-(\lambda x+(1-\lambda)y))+(1-\lambda)(y+z^{*}-(\lambda x+(1-\lambda)y))=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda(x+z^{*}-\lambda x-y+\lambda y)+(1-\lambda)(y+z^{*}-\lambda x-y+\lambda y)=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda((1-\lambda)x+z^{*}-y+\lambda y)+(1-\lambda)(z^{*}-\lambda x+\lambda y)=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda x-\lambda^{2}x+\lambda z^{*}-\lambda y+\lambda^{2}y+z^{*}-\lambda x+\lambda y-\lambda z^{*}+\lambda^{2}x-\lambda^{2}y=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda x-\lambda x+\lambda^{2}x-\lambda^{2}x+\lambda z^{*}-\lambda z^{*}+\lambda y-\lambda y+\lambda^{2}y-\lambda^{2}y+z^{*}=z^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, overall, this implies that 
+\begin_inset Formula $z^{*}\in S$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $z^{*}\in Ball_{\epsilon}(z)$
+\end_inset
+
+ was arbitrary, this implies that 
+\begin_inset Formula $Ball_{\epsilon}(z)\subset S$
+\end_inset
+
+, so 
+\begin_inset Formula $z=\lambda x+(1-\lambda)y\in int(S)$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $\lambda\in(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $x,y\in int(S)$
+\end_inset
+
+ was also arbitrary, we see that 
+\begin_inset Formula $\forall x,y\in int(S),\forall\lambda\in[0,1],\lambda x+(1-\lambda)y\in int(S)$
+\end_inset
+
+, showing that the interior of S convex.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, we wish to show that the closure of S is also convex.
+\end_layout
+
+\begin_layout Section*
+Problem 4
+\end_layout
+
+\begin_layout Standard
+Let some set S be given
+\end_layout
+
+\begin_layout Standard
+Suppose S is convex.
+ To prove the containment of convex combinations for arbitrary finite sets,
+ we shall use induction on the number of element in S (namely, every convex
+ combination of n elements from S is contained within S).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Base Case
+\series default
+: 
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, we have a single element, say 
+\begin_inset Formula $x^{1}$
+\end_inset
+
+, from S and thus 
+\begin_inset Formula $\sum\lambda_{i}=\lambda_{1}=1$
+\end_inset
+
+.
+ Clearly, 
+\begin_inset Formula $\lambda_{1}x^{1}=x^{1}\in S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Inductive Step
+\series default
+: Next, assume the case for 
+\begin_inset Formula $n=k$
+\end_inset
+
+.
+ That is, every convex combination of k elements from S is contained within
+ S.
+\end_layout
+
+\begin_layout Standard
+We want to show the case where 
+\begin_inset Formula $n=k+1$
+\end_inset
+
+.
+ So let some 
+\begin_inset Formula $k+1$
+\end_inset
+
+ elements in S be given, say 
+\begin_inset Formula $x^{1},x^{2},...,x^{k+1}$
+\end_inset
+
+.
+ Let some 
+\begin_inset Formula $\lambda_{i}\geq0$
+\end_inset
+
+ for 
+\begin_inset Formula $i\in\{1,2,...,k+1\}$
+\end_inset
+
+ be given s.t.
+ 
+\begin_inset Formula $\sum_{i=1}^{k+1}\lambda_{i}=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 1
+\series default
+: Suppose 
+\begin_inset Formula $\lambda_{k+1}=1$
+\end_inset
+
+.
+ Then 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sum_{i=1}^{k+1}\lambda_{i}=\sum_{i=1}^{k}\lambda_{i}+1=1\rightarrow\sum_{i=1}^{k}\lambda_{i}=0$
+\end_inset
+
+, and because 
+\begin_inset Formula $\lambda_{i}\geq0$
+\end_inset
+
+, it
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ readily follows that 
+\begin_inset Formula $\lambda_{1},...,\lambda_{k}=0$
+\end_inset
+
+.
+ So the convex combination of these k+1 elements becomes: 
+\begin_inset Formula $\sum_{i=1}^{k+1}\lambda_{i}x^{i}=\sum_{i=1}^{k}\lambda_{i}x^{i}+\lambda_{k+1}x^{k+1}=\sum_{i=1}^{k}0x^{i}+1x^{k+1}=x_{k+1}$
+\end_inset
+
+.
+ So clearly, 
+\begin_inset Formula $\sum_{i=1}^{k+1}\lambda_{i}x^{i}=x_{k+1}\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 2
+\series default
+: Now suppose that 
+\begin_inset Formula $\lambda_{k+1}\neq1$
+\end_inset
+
+.
+ Note that because 
+\begin_inset Formula $\lambda_{i}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum\lambda_{i}=1$
+\end_inset
+
+, it readily follows that 
+\begin_inset Formula $\lambda_{i}\leq1$
+\end_inset
+
+ (the sum of positive scalars must each be less than or equal to the sum).
+ 
+\end_layout
+
+\begin_layout Standard
+Next, we see that 
+\begin_inset Formula $\sum_{i=1}^{k+1}\lambda_{i}=\sum_{i=1}^{k}\lambda_{i}+\lambda_{k+1}=1\rightarrow\sum_{i=1}^{k}\lambda_{i}=1-\lambda_{k+1}$
+\end_inset
+
+, so 
+\begin_inset Formula $\frac{\sum_{i=1}^{k}\lambda_{i}}{1-\lambda_{k+1}}=\sum_{i=1}^{k}\frac{\lambda_{i}}{1-\lambda_{k+1}}=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Also notice that 
+\begin_inset Formula $\frac{\lambda_{i}}{1-\lambda_{k+1}}\geq0,$
+\end_inset
+
+
+\begin_inset Formula $\forall i\in\{1,...,k\}$
+\end_inset
+
+ since 
+\begin_inset Formula $\lambda_{i}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $1>\lambda_{k+1}$
+\end_inset
+
+, so 
+\begin_inset Formula $0<1-\lambda_{k+1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $\frac{\lambda_{i}}{1-\lambda_{k+1}}\geq0,\forall i\in\{1,...,k\}$
+\end_inset
+
+ can act as convex combination coefficients on k elements.
+ If we consider convex combination formed from the first k elements 
+\begin_inset Formula $x^{1},...,x^{k}$
+\end_inset
+
+, we see that 
+\begin_inset Formula $y=\sum_{i=1}^{k}\frac{\lambda_{i}}{1-\lambda_{k+1}}x^{i}\in S$
+\end_inset
+
+ by our inductive hypothesis.
+ 
+\end_layout
+
+\begin_layout Standard
+Because S is convex and 
+\begin_inset Formula $\sum_{i=1}^{k}\frac{\lambda_{i}}{1-\lambda_{k+1}}x^{i},x^{k+1}\in S$
+\end_inset
+
+, we see that for 
+\begin_inset Formula $\lambda=\lambda_{k+1}$
+\end_inset
+
+: 
+\begin_inset Formula $(1-\lambda_{k+1})\sum_{i=1}^{k}\frac{\lambda_{i}}{1-\lambda_{k+1}}x^{i}+\lambda_{k+1}x^{k+1}\in S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+With some algebraic manipulation: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(1-\lambda_{k+1})\sum_{i=1}^{k}\frac{\lambda_{i}}{1-\lambda_{k+1}}x^{i}+\lambda_{k+1}x^{k+1}=\sum_{i=1}^{k}(1-\lambda_{k+1})\frac{\lambda_{i}}{1-\lambda_{k+1}}x^{i}+\lambda_{k+1}x^{k+1}=\sum_{i=1}^{k}\lambda_{i}x^{i}+\lambda_{k+1}x^{k+1}=\sum_{i=1}^{k+1}\lambda_{i}x^{i}\in S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+So this implies the convex combination 
+\begin_inset Formula $\sum_{i=1}^{k+1}\lambda_{i}x^{i}$
+\end_inset
+
+ is in S.
+ And because 
+\begin_inset Formula $x^{i},\lambda_{i}$
+\end_inset
+
+ were arbitrary, we have shown convex combination of 
+\begin_inset Formula $k+1$
+\end_inset
+
+ elements in S is contained within S.
+ 
+\end_layout
+
+\begin_layout Standard
+By induction, we have shown convex combination of finitely many elements
+ in S is contained within S.
+ 
+\end_layout
+
+\begin_layout Section*
+Problem 5
+\end_layout
+
+\begin_layout Standard
+Let some A, C be given as defined in the problem and consider the set 
+\begin_inset Formula $AC$
+\end_inset
+
+ as defined.
+\end_layout
+
+\begin_layout Standard
+To show AC is convex, let some 
+\begin_inset Formula $b,c\in AC$
+\end_inset
+
+ be given.
+ Then we can choose 
+\begin_inset Formula $x,y\in C$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $Ax=b,Ay=c$
+\end_inset
+
+ by definition of AC.
+ Let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given.
+ Because C is convex, we know that 
+\begin_inset Formula $\lambda x+(1-\lambda)y\in C$
+\end_inset
+
+.
+ Set 
+\begin_inset Formula $z=\lambda x+(1-\lambda,)y$
+\end_inset
+
+.
+ Notice then that 
+\begin_inset Formula $Az=A(\lambda x+(1-\lambda)y)=\lambda Ax+(1-\lambda)Ay$
+\end_inset
+
+ by linearity.
+ Because 
+\begin_inset Formula $z\in C$
+\end_inset
+
+, we know that 
+\begin_inset Formula $Az\in AC$
+\end_inset
+
+ by definition of AC.
+ Furthermore, this shows that 
+\begin_inset Formula $\lambda Ax+(1-\lambda)Ay\in AC$
+\end_inset
+
+, and because 
+\begin_inset Formula $x,y,\lambda$
+\end_inset
+
+ we arbitrary, it follows that AC is convex.
+\end_layout
+
+\begin_layout Standard
+AC is not neccesarily closed.
+ As a counterexample, let 
+\begin_inset Formula $A=\begin{bmatrix}0 & 0\\
+0 & 1
+\end{bmatrix}$
+\end_inset
+
+ and 
+\begin_inset Formula $C=\{(x,\mu)|x>0,\mu\geq0,\mu\geq f(x)\}$
+\end_inset
+
+ (an epigraph on strictly positive x).
+ Notice that C is convex (because 
+\begin_inset Formula $f(x)=\frac{1}{x}$
+\end_inset
+
+ is convex on 
+\begin_inset Formula $x>0$
+\end_inset
+
+) and closed (TODODODODODODOODODODODODODODODODODODODOOD)
+\end_layout
+
+\begin_layout Standard
+Notice that, for some point 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x,\mu)$
+\end_inset
+
+ in C, 
+\begin_inset Formula $A*(x,\mu)=(0,\mu)$
+\end_inset
+
+.
+ Consider the sequence 
+\begin_inset Formula $a_{n}=(0,\frac{1}{n}),\forall n\geq1$
+\end_inset
+
+.
+ Notice that 
+\begin_inset Formula $(n,\frac{1}{n})\in C$
+\end_inset
+
+, so 
+\begin_inset Formula $A*(n,\frac{1}{n})=(0,\frac{1}{n})=a_{n}$
+\end_inset
+
+, so 
+\begin_inset Formula $a_{n}\in AC$
+\end_inset
+
+.
+ But the limit point 
+\begin_inset Formula $a_{n}\rightarrow(0,0)\not\in AC$
+\end_inset
+
+ since no element in C has the form 
+\begin_inset Formula $(a,0)$
+\end_inset
+
+.
+ So AC is not closed in this case.
+\end_layout
+
+\begin_layout Standard
+Now consider the case that C is compact.
+ Consider AC and some sequence 
+\begin_inset Formula $\{y_{n}\}$
+\end_inset
+
+ for 
+\begin_inset Formula $y_{n}\in AC$
+\end_inset
+
+ which has some limit point 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ We want to show that the limit point 
+\begin_inset Formula $y\in C$
+\end_inset
+
+.
+ To do so, first, construct a sequence 
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 6
+\end_layout
+
+\begin_layout Standard
+To show convexity under linear maps, let A,Y be given as defined in the
+ problem and consider 
+\begin_inset Formula $A^{-1}(Y)=\{x|Ax\in Y\}$
+\end_inset
+
+.
+ Let some 
+\begin_inset Formula $x,y\in A^{-1}(Y)$
+\end_inset
+
+ be given.
+ Then we know that 
+\begin_inset Formula $Ax,Ay\in Y$
+\end_inset
+
+.
+ Now let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given.
+ Since Y is convex, 
+\begin_inset Formula $\lambda(Ax)+(1-\lambda)(Ay)\in Y$
+\end_inset
+
+.
+ So then 
+\begin_inset Formula $\lambda(Ax)+(1-\lambda)(Ay)=(A\lambda x+A(1-\lambda)y)=A(\lambda x+(1-\lambda)y)\in Y$
+\end_inset
+
+.
+ But this implies that 
+\begin_inset Formula $(\lambda x+(1-\lambda)y)\in A^{-1}(Y)$
+\end_inset
+
+, and because 
+\begin_inset Formula $x,y,\lambda$
+\end_inset
+
+ were arbitrary, it readily follows that 
+\begin_inset Formula $A^{-1}(Y)$
+\end_inset
+
+ is convex.
+\end_layout
+
+\begin_layout Standard
+The set under an affine map is also convex for arbitrary b.
+ Consider 
+\begin_inset Formula $A^{-1}(Y)=\{x|Ax+b\in Y\}$
+\end_inset
+
+.
+ Let some 
+\begin_inset Formula $x,y\in A^{-1}(Y)$
+\end_inset
+
+ be given.
+ Then we know that 
+\begin_inset Formula $Ax+b,Ay+b\in Y$
+\end_inset
+
+.
+ Now let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given.
+ Since Y is convex, 
+\begin_inset Formula $\lambda(Ax+b)+(1-\lambda)(Ay+b)\in Y$
+\end_inset
+
+.
+ So then 
+\begin_inset Formula $\lambda(Ax+b)+(1-\lambda)(Ay+b)=(A\lambda x+\lambda b+A(1-\lambda)y+(1-\lambda)b)=A(\lambda x+(1-\lambda)y)+b\in Y$
+\end_inset
+
+.
+ But this implies that 
+\begin_inset Formula $(\lambda x+(1-\lambda)y)\in A^{-1}(Y)$
+\end_inset
+
+, and because 
+\begin_inset Formula $x,y,\lambda$
+\end_inset
+
+ were arbitrary, it readily follows that 
+\begin_inset Formula $A^{-1}(Y)$
+\end_inset
+
+ is convex.
+\end_layout
+
+\begin_layout Section*
+Problem 7
+\end_layout
+
+\begin_layout Standard
+Let some set S be given.
+ Consider CoS, the convex hull of S, which is defined to be the intersection
+ of all convex sets containing S.
+ Let 
+\begin_inset Formula $CC(S)$
+\end_inset
+
+ be the set of all convex combinations of points in S.
+\end_layout
+
+\begin_layout Standard
+To show that 
+\begin_inset Formula $CC(S)=CoS$
+\end_inset
+
+, first we shall show that 
+\begin_inset Formula $CC(S)\subseteq CoS$
+\end_inset
+
+.
+ Consider some arbitrary convex set, say X, containing S.
+ Let some element 
+\begin_inset Formula $y\in CC(S)$
+\end_inset
+
+ be given.
+ Then we can choose some r elements 
+\begin_inset Formula $\{x^{1},...,x^{r}\}\subseteq S$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{1},...,\lambda_{r}\geq0$
+\end_inset
+
+ with 
+\begin_inset Formula $\sum\lambda_{i}=1$
+\end_inset
+
+ such that 
+\begin_inset Formula $y=\sum\lambda_{i}x^{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\{x^{1},...,x^{r}\}\subseteq S\subseteq X$
+\end_inset
+
+ and X is convex, from (4), we know that every finite convex combination
+ of elements in X is contained within X; so 
+\begin_inset Formula $y=\sum\lambda_{i}x^{i}\in X$
+\end_inset
+
+.
+ Because y was arbitrary in 
+\begin_inset Formula $CC(S)$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $CC(S)\subseteq X$
+\end_inset
+
+.
+ And because X was any arbitrary convex set containing S, it readily follows
+ every convex set containing S also contains 
+\begin_inset Formula $CC(S)$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $CC(S)\subseteq CoS$
+\end_inset
+
+ since 
+\begin_inset Formula $CoS$
+\end_inset
+
+ is the intersection of all these sets.
+ 
+\end_layout
+
+\begin_layout Standard
+To show 
+\begin_inset Formula $CoS\subseteq CC(S)$
+\end_inset
+
+, it suffices to show that 
+\begin_inset Formula $CC(S)$
+\end_inset
+
+ is a convex set containing S, which implies it is a set included within
+ the intersection forming 
+\begin_inset Formula $CoS$
+\end_inset
+
+ .
+ For any 
+\begin_inset Formula $x\in S$
+\end_inset
+
+, 
+\begin_inset Formula $x\in CC(S)$
+\end_inset
+
+ by constructing the convex combination with 
+\begin_inset Formula $\lambda_{1}=1$
+\end_inset
+
+:
+\begin_inset Formula $\sum\lambda_{i}x^{i}=\lambda_{1}x=x$
+\end_inset
+
+ .
+ So 
+\begin_inset Formula $S\subseteq CC(S)$
+\end_inset
+
+.
+ To show 
+\begin_inset Formula $CC(S)$
+\end_inset
+
+ is convex, let some 
+\begin_inset Formula $x,y\in CC(S)$
+\end_inset
+
+ be given.
+ Then we can choose some r elements 
+\begin_inset Formula $\{x^{1},...,x^{r}\}\subseteq S$
+\end_inset
+
+ with 
+\begin_inset Formula $\alpha_{1},...,\alpha_{r}\geq0$
+\end_inset
+
+ with 
+\begin_inset Formula $\sum\alpha_{i}=1$
+\end_inset
+
+ such that 
+\begin_inset Formula $x=\sum_{i=1}^{s}\alpha_{i}x^{i}$
+\end_inset
+
+.
+ Similarly, we can choose some s elements 
+\begin_inset Formula $\{y^{1},...,y^{s}\}\subseteq S$
+\end_inset
+
+ with 
+\begin_inset Formula $\beta_{1},...,\beta_{r}\geq0$
+\end_inset
+
+ with 
+\begin_inset Formula $\sum\beta_{i}=1$
+\end_inset
+
+ such that 
+\begin_inset Formula $y=\sum_{i=1}^{s}\beta_{i}y^{i}$
+\end_inset
+
+.
+ Now let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given and consider 
+\begin_inset Formula $z=\lambda x+(1-\lambda)y=\lambda\sum_{i=1}^{s}\alpha_{i}x^{i}+(1-\lambda)\sum_{i=1}^{s}\beta_{i}y^{i}$
+\end_inset
+
+.
+ We would like to show 
+\begin_inset Formula $z\in CC(S)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $\{z^{1},...,z^{r+s}\}\subseteq S$
+\end_inset
+
+ as 
+\begin_inset Formula $z^{i}=x^{i},\forall i\in\{1,...,r\}$
+\end_inset
+
+ and 
+\begin_inset Formula $z^{r+i}=y^{i},\forall i\in\{1,..,s\}$
+\end_inset
+
+.
+ Next, define 
+\begin_inset Formula $\{\gamma_{1},...,\gamma_{r+s}\}$
+\end_inset
+
+ with 
+\begin_inset Formula $\gamma_{i}=\lambda\alpha_{i},\forall i\in\{1,...,r\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{r+i}=(1-\lambda)\beta_{i},\forall i\in\{1,...,s\}$
+\end_inset
+
+.
+ Clearly, because 
+\begin_inset Formula $\alpha_{i},\beta_{i},\lambda,(1-\lambda)\geq0$
+\end_inset
+
+, it readily follows that 
+\begin_inset Formula $\gamma_{i}\geq0,\forall i\in\{1,...,r+s\}$
+\end_inset
+
+.
+ Furthermore, 
+\begin_inset Formula $\sum_{i=1}^{r+s}\gamma_{i}=\sum_{i=1}^{r}\gamma_{i}+\sum_{i=r+1}^{r+s}\gamma_{i}=\sum_{i=1}^{r}\lambda\alpha_{i}+\sum_{i=1}^{s}(1-\lambda)\beta_{i}=\lambda\sum_{i=1}^{r}\alpha_{i}+(1-\lambda)\sum_{i=1}^{s}\beta_{i}=\lambda(1)+(1-\lambda)(1)=1$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\sum_{i=1}^{r+s}\gamma_{i}z^{i}$
+\end_inset
+
+ is a convex combination of points in 
+\begin_inset Formula $S$
+\end_inset
+
+, so 
+\begin_inset Formula $\sum_{i=1}^{r+s}\gamma_{i}z^{i}\in CC(S)$
+\end_inset
+
+.
+ Furthermore, notice that 
+\begin_inset Formula $\sum_{i=1}^{r+s}\gamma_{i}z^{i}=\sum_{i=1}^{r}\lambda\alpha_{i}x^{i}+\sum_{i=1}^{s}(1-\lambda)\beta_{i}y^{i}=\lambda\sum_{i=1}^{r}\alpha_{i}x^{i}+(1-\lambda)\sum_{i=1}^{s}\beta_{i}y^{i}=z$
+\end_inset
+
+, from before.
+ Hence, 
+\begin_inset Formula $z\in CC(S)$
+\end_inset
+
+.
+ Because this was for arbitrary 
+\begin_inset Formula $x,y\in CC(S),\lambda\in[0,1]$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $CC(S)$
+\end_inset
+
+ is a convex set.
+ Since 
+\begin_inset Formula $CC(S)$
+\end_inset
+
+ is a convex set containing S, 
+\begin_inset Formula $CoS\subseteq CC(S)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hence, overall, we have shown that: 
+\begin_inset Formula $CoS=CC(S)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 8
+\end_layout
+
+\begin_layout Standard
+Let some cone C be given.
+ First, suppose that 
+\begin_inset Formula $C$
+\end_inset
+
+ is convex and let some 
+\begin_inset Formula $x,y\in C$
+\end_inset
+
+ be given.
+ Because C is convex, we know that 
+\begin_inset Formula $\forall\lambda\in[0,1],(1-\lambda)x+\lambda y\in C$
+\end_inset
+
+.
+ So let us set 
+\begin_inset Formula $\lambda=\frac{1}{2}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $(1-\frac{1}{2})x+\frac{1}{2}y=\frac{1}{2}x+\frac{1}{2}y=\frac{1}{2}(x+y)\in C$
+\end_inset
+
+.
+ And because C is a cone, it follows that 
+\begin_inset Formula $\alpha*\frac{1}{2}(x+y)\in C$
+\end_inset
+
+ for any 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ So if we choose 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+, we see that 
+\begin_inset Formula $2*\frac{1}{2}(x+y)=x+y\in C$
+\end_inset
+
+.
+ Because x,y were arbitrary in C, we see that C is closed under addition.
+\end_layout
+
+\begin_layout Standard
+Next suppose that 
+\begin_inset Formula $C$
+\end_inset
+
+ is closed under additon and let some 
+\begin_inset Formula $x,y\in C$
+\end_inset
+
+ be given.
+ We want to show that 
+\begin_inset Formula $\forall\lambda\in[0,1],(1-\lambda)x+\lambda y\in C$
+\end_inset
+
+.
+ So let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given.
+ If 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+, then 
+\begin_inset Formula $(1-0)x+0y=x$
+\end_inset
+
+, which we know is in C since 
+\begin_inset Formula $x\in C$
+\end_inset
+
+; similarly, if 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+, then 
+\begin_inset Formula $(1-1)x+1y=y$
+\end_inset
+
+, which we know is in C since 
+\begin_inset Formula $y\in C$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\lambda\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\ne1$
+\end_inset
+
+, then 
+\begin_inset Formula $1>\lambda>0$
+\end_inset
+
+, so by the definition of a cone, 
+\begin_inset Formula $\lambda y\in C$
+\end_inset
+
+.
+ Furthermore, this implies that 
+\begin_inset Formula $(1-\lambda)>0$
+\end_inset
+
+, so 
+\begin_inset Formula $(1-\lambda)x\in C$
+\end_inset
+
+.
+ By the additive closure of C, we see that 
+\begin_inset Formula $(1-\lambda)x+\lambda y\in C$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $\lambda,x,y$
+\end_inset
+
+ were arbitrary, we see that 
+\begin_inset Formula $\forall x,y\in C,\forall\lambda\in[0,1],(1-\lambda)x+\lambda y\in C_{1}\cap C_{2}$
+\end_inset
+
+, so C is in fact convex.
+\end_layout
+
+\begin_layout Section*
+Problem 9
+\end_layout
+
+\begin_layout Section*
+Problem 10
+\end_layout
+
+\begin_layout Section*
+Problem 11
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $P(y)$
+\end_inset
+
+ be given with 
+\begin_inset Formula $y\not\in\Omega$
+\end_inset
+
+ (otherwise, 
+\begin_inset Formula $\left\langle y-P(y),x-P(y)\right\rangle =$
+\end_inset
+
+.
+ Then, 
+\begin_inset Formula $\forall x\in\Omega$
+\end_inset
+
+, 
+\begin_inset Formula $\left\Vert y-P(y)\right\Vert \leq\left\Vert y-x\right\Vert $
+\end_inset
+
+, so 
+\begin_inset Formula $\left\Vert y-P(y)\right\Vert {}^{2}=\left\langle y-P(y),y-P(y)\right\rangle \leq\left\Vert y-x\right\Vert ^{2}=\left\langle y-x,y-x\right\rangle $
+\end_inset
+
+.
+ Consider 
+\begin_inset Formula $\left\langle y-P(y),x-P(y)\right\rangle $
+\end_inset
+
+ for some 
+\begin_inset Formula $x\in\Omega$
+\end_inset
+
+ with 
+\begin_inset Formula $x\neq P(y)$
+\end_inset
+
+ (otherwise, 
+\begin_inset Formula $\left\langle y-P(y),x-P(y)\right\rangle =\left\langle y-P(y),0\right\rangle =0$
+\end_inset
+
+ trivially).
+ Because 
+\begin_inset Formula $P(y),x\in\Omega$
+\end_inset
+
+, we know that for 
+\begin_inset Formula $\lambda\in(0,1]$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda x+(1-\lambda)P(y)\in\Omega$
+\end_inset
+
+.
+ So then 
+\begin_inset Formula $\left\langle y-P(y),y-P(y)\right\rangle \leq\left\langle y-(\lambda x+(1-\lambda)P(y)),y-(\lambda x+(1-\lambda)P(y))\right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+But: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle y-(\lambda x+(1-\lambda)P(y)),y-(\lambda x+(1-\lambda)P(y))\right\rangle =$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle y-\lambda x-P(y)+\lambda P(y),y-\lambda x-P(y)-\lambda P(y)\right\rangle =\left\langle y-P(y)+\lambda(P(y)-x),y-P(y)+\lambda(P(y)-x)\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle y-P(y),y-P(y)+\lambda(P(y)-x)\right\rangle +\left\langle \lambda(P(y)-x),y-P(y)+\lambda(P(y)-x)\right\rangle =$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle y-P(y),y-P(y)\right\rangle +\left\langle y-P(y),-\lambda(x-P(y))\right\rangle +\left\langle -\lambda(x-P(y)),y-P(y)\right\rangle +\left\langle -\lambda(x-P(y)),-\lambda(x-P(y))\right\rangle =$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle y-P(y),y-P(y)\right\rangle +2\lambda\left\langle y-P(y),-(x-P(y))\right\rangle +\lambda^{2}\left\langle -(x-P(y)),-(x-P(y))\right\rangle =$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle y-P(y),y-P(y)\right\rangle -2\lambda\left\langle y-P(y),-(x-P(y))\right\rangle +\lambda^{2}\left\langle (x-P(y)),(x-P(y))\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So we see that: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle y-P(y),y-P(y)\right\rangle \leq\left\langle y-P(y),y-P(y)\right\rangle -2\lambda\left\langle y-P(y),(x-P(y))\right\rangle +\lambda^{2}\left\langle (x-P(y)),(x-P(y))\right\rangle \rightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0\leq-2\lambda\left\langle y-P(y),(x-P(y))\right\rangle +\lambda^{2}\left\langle (x-P(y)),(x-P(y))\right\rangle \rightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\langle y-P(y),(x-P(y))\right\rangle \leq\frac{\lambda}{2}\left\langle (x-P(y)),(x-P(y))\right\rangle $
+\end_inset
+
+ (noting that we chose 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+, allowing for this division)
+\end_layout
+
+\begin_layout Standard
+We know that 
+\begin_inset Formula $\left\langle (x-P(y)),(x-P(y))\right\rangle \geq0$
+\end_inset
+
+ since 
+\begin_inset Formula $\left\langle (x-P(y)),(x-P(y))\right\rangle =||(x-P(y)||^{2}$
+\end_inset
+
+ .
+ Because 
+\begin_inset Formula $\left\langle y-P(y),(x-P(y))\right\rangle $
+\end_inset
+
+ is independent of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, this inequality should hold 
+\begin_inset Formula $\forall\lambda\in(0,1]$
+\end_inset
+
+.
+ For any 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, we can choose 
+\begin_inset Formula $\lambda=\frac{\epsilon}{\left\langle (x-P(y)),(x-P(y))\right\rangle }$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section*
+Problem 12
+\end_layout
+
+\begin_layout Section*
+Problem 13
+\end_layout
+
+\begin_layout Standard
+Let some positive integer n be given and let S be the set of all n by n
+ positive semidefinite matricies.
+ To show S is a cone, let some 
+\begin_inset Formula $A\in S$
+\end_inset
+
+ and some 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ be given.
+ Because A is positive semidefinite, we can decompose it via eigenvalue
+ decomposition into 
+\begin_inset Formula $QDQ^{T}$
+\end_inset
+
+, where Q is orthogonal and D is a real valued diagonal matrix of A's eigenvalue
+s.
+ Because A is positive semidefinite, D consists of positive values (on the
+ diagonal).
+ So consider 
+\begin_inset Formula $\lambda A$
+\end_inset
+
+.
+ Trivially, 
+\begin_inset Formula $\lambda A$
+\end_inset
+
+ is symmetric with 
+\begin_inset Formula $(\lambda A)^{T}=\lambda A^{T}=\lambda A$
+\end_inset
+
+.
+ Furthermore, 
+\begin_inset Formula $\lambda A=\lambda DQ^{T}=Q(\lambda D)Q^{T}$
+\end_inset
+
+.
+ Notice that because D is a diagonal matrix (with real values), 
+\begin_inset Formula $\lambda D$
+\end_inset
+
+ is also a diagonal matrix.
+ Furthermore, because 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ and 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+, we know that 
+\begin_inset Formula $(\lambda D)$
+\end_inset
+
+ has positive entries as well.
+ So we see that can be written as a eigendecomposition of a symmetric matrix,
+ with 
+\begin_inset Formula $(\lambda D)$
+\end_inset
+
+ as its diagonal matrix of eigenvalues.
+ Furthermore, because 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(\lambda A)$
+\end_inset
+
+ is symmetric and its
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ eigenvalues are all positive, we see that 
+\begin_inset Formula $(\lambda A)$
+\end_inset
+
+ is positive semidefinite, showing that S is a cone.
+\end_layout
+
+\begin_layout Standard
+To show that S is a pointed cone, it suffices to show that there is no 
+\begin_inset Formula $A\in S,A\neq0$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $-A\in S$
+\end_inset
+
+.
+ To show this, let some 
+\begin_inset Formula $A\in S,A\neq0$
+\end_inset
+
+ be given.
+ We can decompose A into 
+\begin_inset Formula $A=QDQ^{T}$
+\end_inset
+
+ via eigendecomposition.
+ Now consider 
+\begin_inset Formula $-A$
+\end_inset
+
+.
+ Again, we see that 
+\begin_inset Formula $-A=-1*A$
+\end_inset
+
+ is symmetric.
+ Then 
+\begin_inset Formula $-A=-1*A=-1(QDQ^{T})=Q(-1*D)Q^{T}$
+\end_inset
+
+.
+ We can see that 
+\begin_inset Formula $Q(-1*D)Q^{T}$
+\end_inset
+
+ forms a eigendecomposition for the symmetric matrix 
+\begin_inset Formula $-A$
+\end_inset
+
+ with diagonal matrix 
+\begin_inset Formula $(-1*D)$
+\end_inset
+
+.
+ Recall that 
+\begin_inset Formula $D\geq0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $D=0$
+\end_inset
+
+, then 
+\begin_inset Formula $A=Q(0)Q^{T}=0$
+\end_inset
+
+, a contradiction.
+ So D must have atleast 1 strictly positive entry on its diagonal, say 
+\begin_inset Formula $D_{i,j}>0$
+\end_inset
+
+ for some i,j.
+ But this implies that 
+\begin_inset Formula $(-1*D)_{i,j}=-1*D{}_{i,j}<0$
+\end_inset
+
+.
+ This implies from the eigendecomposition 
+\begin_inset Formula $-A=Q(-1*D)Q^{T}$
+\end_inset
+
+ that 
+\begin_inset Formula $-A$
+\end_inset
+
+ has a negative eigenvalue.
+ But this implies that 
+\begin_inset Formula $-A$
+\end_inset
+
+ is not positive semidefinite.
+ Because A was arbitrary, we have shown no positive semidefinite matrix
+ A has its negative 
+\begin_inset Formula $-A$
+\end_inset
+
+ in S.
+ So S is a pointed cone.
+\end_layout
+
+\end_body
+\end_document
