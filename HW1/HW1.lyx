@@ -64,12 +64,24 @@
 
 \begin_body
 
+\begin_layout Title
+CS730: Homework 1
+\end_layout
+
+\begin_layout Author
+Sahit Mandala
+\end_layout
+
 \begin_layout Section*
 Problem 1
 \end_layout
 
+\begin_layout Subsection*
+1) 
+\end_layout
+
 \begin_layout Standard
-1) Intersection of convex sets is convex: Proof
+Intersection of convex sets is convex: Proof
 \end_layout
 
 \begin_layout Standard
@@ -129,16 +141,122 @@ Let some 2 convex sets
  is also convex.
 \end_layout
 
+\begin_layout Subsection*
+2) 
+\end_layout
+
 \begin_layout Standard
-2) Union of convex sets is convex: Counterexample
+Union of convex sets is convex: Counterexample
+\end_layout
+
+\begin_layout Standard
+See attached
 \end_layout
 
 \begin_layout Section*
 Problem 2
 \end_layout
 
+\begin_layout Standard
+Let positive integer m and convex sets 
+\begin_inset Formula $C_{i}\in\mathbb{R}^{n_{i}},i\in\{1,...,m\}$
+\end_inset
+
+ be given.
+ Consider 
+\begin_inset Formula $C_{1}\times...\times C_{m}$
+\end_inset
+
+ and let some 
+\begin_inset Formula $x,y\in C_{1}\times...\times C_{m}$
+\end_inset
+
+.
+ By the definition of Cartesian product, we can write 
+\begin_inset Formula $x=[x_{1},...,x_{m}]^{T},y=[y_{1},...,y_{m}]^{T}$
+\end_inset
+
+, for 
+\begin_inset Formula $x_{i},y_{i}\in C_{i},\forall i\in\{1,..,m\}$
+\end_inset
+
+.
+ Let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given and consider 
+\begin_inset Formula $\lambda x+(1-\lambda)y=\lambda[x_{1},...,x_{m}]^{T}+(1-\lambda)[y_{1},...,y_{m}]^{T}$
+\end_inset
+
+.
+ By the properties of the vector space under Cartesian products: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\lambda[x_{1},...,x_{m}]^{T}+(1-\lambda)[y_{1},...,y_{m}]^{T}=[\lambda x_{1},...,\lambda x_{m}]^{T}+[(1-\lambda)y_{1},...,(1-\lambda)y_{m}]^{T}=[\lambda x_{1}+(1-\lambda)y_{1},...,\lambda x_{m}+(1-\lambda)y_{m}]^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For each 
+\begin_inset Formula $i\in\{1,...,m\}$
+\end_inset
+
+, we know that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\lambda x_{i}+(1-\lambda)y_{i}\in C_{i}$
+\end_inset
+
+ since 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ is convex.
+ So 
+\begin_inset Formula $[\lambda x_{1}+(1-\lambda)y_{1},...,\lambda x_{m}+(1-\lambda)y_{m}]^{T}\in C_{1}\times...\times C_{m}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $x,y,\lambda$
+\end_inset
+
+ were arbitrary, it readily follows that 
+\begin_inset Formula $C_{1}\times...\times C_{m}$
+\end_inset
+
+ is convex.
+\end_layout
+
 \begin_layout Section*
-Problem 3
+Problem 3 
+\end_layout
+
+\begin_layout Subsection*
+1)
 \end_layout
 
 \begin_layout Standard
@@ -341,8 +459,102 @@ So, overall, this implies that
  
 \end_layout
 
+\begin_layout Subsection*
+2)
+\end_layout
+
 \begin_layout Standard
 Next, we wish to show that the closure of S is also convex.
+ Let some 
+\begin_inset Formula $x,y\in cl(S)$
+\end_inset
+
+ be given.
+ Let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given.
+ To show 
+\begin_inset Formula $\lambda x+(1-\lambda)y\in cl(S)$
+\end_inset
+
+, it suffices to construct a sequence of points in S s.t.
+ 
+\begin_inset Formula $\lambda x+(1-\lambda)y$
+\end_inset
+
+ is the limit point.
+ Because 
+\begin_inset Formula $x\in cl(S)$
+\end_inset
+
+, we can construct a sequence 
+\begin_inset Formula $\{x_{n}\}\in S$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x_{n}\in Ball_{\frac{1}{n}}(x)$
+\end_inset
+
+ (every open ball of x with strictly positive radius contains some element
+ in S); clearly, the limit point is x since 
+\begin_inset Formula $|x_{n}-x|\leq\frac{1}{n}$
+\end_inset
+
+.
+ Similarly, we can construct a sequence 
+\begin_inset Formula $\{y_{n}\}\in S$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $y_{n}\in Ball_{\frac{1}{n}}(y)$
+\end_inset
+
+ (again, with limit 
+\begin_inset Formula $y$
+\end_inset
+
+).
+ So then we can construct a new sequence 
+\begin_inset Formula $z_{i}=\lambda x_{i}+(1-\lambda)y_{i}\in S$
+\end_inset
+
+, since 
+\begin_inset Formula $x_{i},y_{i}\in S$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+ is convex.
+ In the limit, 
+\begin_inset Formula $x_{i}\rightarrow x,y_{i}\rightarrow y$
+\end_inset
+
+ so 
+\begin_inset Formula $z_{i}=\lambda x_{i}+(1-\lambda)y_{i}\rightarrow\lambda x+(1-\lambda)y$
+\end_inset
+
+, so the limit point of this sequence is 
+\begin_inset Formula $\lambda x+(1-\lambda)y$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $\lambda x+(1-\lambda)y\in cl(S)$
+\end_inset
+
+.
+ Overall, because x,y were arbitrary and 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+, this shows that cl(S) is also convex.
+ 
 \end_layout
 
 \begin_layout Section*
@@ -350,7 +562,7 @@ Problem 4
 \end_layout
 
 \begin_layout Standard
-Let some set S be given
+Let some set S be given.
 \end_layout
 
 \begin_layout Standard
@@ -624,13 +836,17 @@ So this implies the convex combination
 \end_layout
 
 \begin_layout Standard
-By induction, we have shown convex combination of finitely many elements
+By induction, we have shown the convex combination of finitely many elements
  in S is contained within S.
  
 \end_layout
 
 \begin_layout Section*
 Problem 5
+\end_layout
+
+\begin_layout Subsection*
+1)
 \end_layout
 
 \begin_layout Standard
@@ -697,6 +913,10 @@ To show AC is convex, let some
  we arbitrary, it follows that AC is convex.
 \end_layout
 
+\begin_layout Subsection*
+2)
+\end_layout
+
 \begin_layout Standard
 AC is not neccesarily closed.
  As a counterexample, let 
@@ -706,7 +926,7 @@ AC is not neccesarily closed.
 \end_inset
 
  and 
-\begin_inset Formula $C=\{(x,\mu)|x>0,\mu\geq0,\mu\geq f(x)\}$
+\begin_inset Formula $C=\{(x,\mu)|x>0,\mu\geq0,\mu\geq\frac{1}{x}\}$
 \end_inset
 
  (an epigraph on strictly positive x).
@@ -718,7 +938,7 @@ AC is not neccesarily closed.
 \begin_inset Formula $x>0$
 \end_inset
 
-) and closed (TODODODODODODOODODODODODODODODODODODODOOD)
+) and closed.
 \end_layout
 
 \begin_layout Standard
@@ -775,34 +995,87 @@ Notice that, for some point
 
 \begin_layout Standard
 Now consider the case that C is compact.
- Consider AC and some sequence 
-\begin_inset Formula $\{y_{n}\}$
+ To show AC is closed, consider AC and and let some limit point 
+\begin_inset Formula $x$
 \end_inset
 
- for 
-\begin_inset Formula $y_{n}\in AC$
-\end_inset
-
- which has some limit point 
-\begin_inset Formula $y$
-\end_inset
-
-.
- We want to show that the limit point 
-\begin_inset Formula $y\in C$
+ of AC be given.
+ We want to show that 
+\begin_inset Formula $x\in AC$
 \end_inset
 
 .
  To do so, first, construct a sequence 
-\begin_inset Formula $\{x_{n}\}$
+\begin_inset Formula $\{x_{n}\}\subseteq AC$
 \end_inset
 
  s.t.
  
-\begin_inset Formula $x_{n}$
+\begin_inset Formula $x_{n}\rightarrow x$
 \end_inset
 
+.
+ By definition of AC, we can choose some 
+\begin_inset Formula $\{c_{n}\}\subseteq C$
+\end_inset
 
+ s.t.
+ 
+\begin_inset Formula $Ac_{n}=x_{n}$
+\end_inset
+
+.
+ Because C is compact, we can choose some subsequence of 
+\begin_inset Formula $\{c_{n}\}$
+\end_inset
+
+ s.t.
+ the limit point, say 
+\begin_inset Formula $c$
+\end_inset
+
+, is in 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ That is, for some (strictly) increasing function 
+\begin_inset Formula $f:\mathbb{N}\rightarrow\mathbb{N}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{f(n)}\rightarrow c\in C$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $Ac_{f(n)}-Ac=A(c_{f(n)}-c)\rightarrow A*0=0$
+\end_inset
+
+, so 
+\begin_inset Formula $Ac_{f(n)}\rightarrow Ac$
+\end_inset
+
+.
+ But by our choice of 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+, we know that 
+\begin_inset Formula $Ac_{f(n)}\rightarrow x$
+\end_inset
+
+.
+ Hence, 
+\begin_inset Formula $Ac=x\in AC$
+\end_inset
+
+ since 
+\begin_inset Formula $c\in C$
+\end_inset
+
+.
+ Overall, this shows that AC is closed.
 \end_layout
 
 \begin_layout Section*
@@ -1121,7 +1394,11 @@ Define
 \end_inset
 
 .
- Furthermore, 
+ 
+\end_layout
+
+\begin_layout Standard
+Furthermore, 
 \begin_inset Formula $\sum_{i=1}^{r+s}\gamma_{i}=\sum_{i=1}^{r}\gamma_{i}+\sum_{i=r+1}^{r+s}\gamma_{i}=\sum_{i=1}^{r}\lambda\alpha_{i}+\sum_{i=1}^{s}(1-\lambda)\beta_{i}=\lambda\sum_{i=1}^{r}\alpha_{i}+(1-\lambda)\sum_{i=1}^{s}\beta_{i}=\lambda(1)+(1-\lambda)(1)=1$
 \end_inset
 
@@ -1175,6 +1452,233 @@ Hence, overall, we have shown that:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection*
+2)
+\end_layout
+
+\begin_layout Standard
+Suppose that S is compact.
+ To show that coS is compact, first we shall show it is bounded.
+ Because S is compact and thus bounded, we can choose some 
+\begin_inset Formula $M$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\forall a\in S,\left\Vert a-0\right\Vert =\left\Vert a-0\right\Vert =\left\Vert a\right\Vert \leq M$
+\end_inset
+
+.
+ Now let some 
+\begin_inset Formula $x\in coS$
+\end_inset
+
+ be given.
+ Then we can choose some r elements 
+\begin_inset Formula $\{x^{1},...,x^{r}\}\subseteq S$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{1},...,\lambda_{r}\geq0$
+\end_inset
+
+ with 
+\begin_inset Formula $\sum\lambda_{i}=1$
+\end_inset
+
+ such that 
+\begin_inset Formula $x=\sum\lambda_{i}x^{i}$
+\end_inset
+
+.
+ Notice then that 
+\begin_inset Formula $\left\Vert x-0\right\Vert =\left\Vert \sum\lambda_{i}x^{i}\right\Vert =\sum|\lambda_{i}|\left\Vert x^{i}\right\Vert \leq\sum|\lambda_{i}|M$
+\end_inset
+
+ by the triangle inequality and by our definition of 
+\begin_inset Formula $x^{i},M$
+\end_inset
+
+.
+ We have shown that the distance from every point x in coS to 0 is bounded
+ by 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sum|\lambda_{i}|M$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ and thus the set itself in bounded.
+\end_layout
+
+\begin_layout Standard
+Next, we will show closure.
+ Suppose that 
+\begin_inset Formula $x$
+\end_inset
+
+ is a limit point of coS.
+ That is, we can construct a sequence 
+\begin_inset Formula $\{a_{n}\}\in coS$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $a_{n}\rightarrow x$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $a_{n}=\sum_{i=1}^{r_{n}}\lambda_{n,i}x_{n}^{i}$
+\end_inset
+
+ for some positive integers 
+\begin_inset Formula $r_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{n}^{i}\in S$
+\end_inset
+
+, and 
+\begin_inset Formula $\lambda_{n,i}\in[0,1]$
+\end_inset
+
+.
+ In compact X, we can construct a subsequence of 
+\begin_inset Formula $x_{n}^{1}$
+\end_inset
+
+ with some limit point in X, say 
+\begin_inset Formula $\{x_{n^{*}}^{1}\}$
+\end_inset
+
+ for some 
+\begin_inset Formula $n^{*}\in N^{*}\subseteq\mathbb{N}$
+\end_inset
+
+.
+ Similarly, we can construct another subsequence on 
+\begin_inset Formula $\{x_{f(n)}^{2}\}$
+\end_inset
+
+ s.t.
+ it too has a limit point in X, call it 
+\begin_inset Formula $\{x_{n^{**}}^{2}\}$
+\end_inset
+
+ for 
+\begin_inset Formula $n^{**}\in N^{**}\subseteq N^{*}$
+\end_inset
+
+.
+ We can repeat this process until we have some subset 
+\begin_inset Formula $N^{(r)}\subseteq\mathbb{N}$
+\end_inset
+
+ s.t.
+ each subsequence 
+\begin_inset Formula $\{x_{n^{'}}^{i}\}$
+\end_inset
+
+ converges for 
+\begin_inset Formula $n^{'}\in N^{(r)}$
+\end_inset
+
+, all i.
+ Furthermore, we can apply a similar process to 
+\begin_inset Formula $\lambda_{n}^{i}$
+\end_inset
+
+ since 
+\begin_inset Formula $\lambda_{n}^{i}\in[0,1]$
+\end_inset
+
+ is a compact space, using 
+\begin_inset Formula $N^{(r)}$
+\end_inset
+
+ as our initial set of subsequence indices.
+ So we can construct a subset 
+\begin_inset Formula $M^{(r)}\subseteq N^{(r)}\subseteq\mathbb{N}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\{\lambda_{n}^{i}\}$
+\end_inset
+
+ converges in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ for all i.
+ On the subsequence defined by 
+\begin_inset Formula $M^{(r)}$
+\end_inset
+
+, we have 
+\begin_inset Formula $a_{n}=\sum_{i}^{r_{n}}\lambda_{n,i}x_{n}^{i}$
+\end_inset
+
+, as 
+\begin_inset Formula $n\in M^{(r)}\rightarrow\infty$
+\end_inset
+
+, we see that the terms 
+\begin_inset Formula $x_{n}^{i}\rightarrow x^{i}\in X,\lambda_{n,i}\rightarrow\lambda_{i}\in[0,1]$
+\end_inset
+
+ converge, particularly to elements in S, 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ respectively.
+ Furthermore, 
+\begin_inset Formula $\sum_{i}^{r_{n}}\lambda_{n,i}=1$
+\end_inset
+
+, so in the limit, we know 
+\begin_inset Formula $\sum\lambda_{i}=1$
+\end_inset
+
+.
+ So then the limit 
+\begin_inset Formula $\sum\lambda_{n,i}x_{n}^{i}\rightarrow\sum\lambda_{i}x^{i}=x$
+\end_inset
+
+ is a convex combination of terms in 
+\begin_inset Formula $S$
+\end_inset
+
+; hence, 
+\begin_inset Formula $\sum\lambda_{i}x^{i}=x\in coS$
+\end_inset
+
+, showing that coS is closed.
 \end_layout
 
 \begin_layout Section*
@@ -1233,7 +1737,7 @@ Next suppose that
 \begin_inset Formula $C$
 \end_inset
 
- is closed under additon and let some 
+ is closed under addition and let some 
 \begin_inset Formula $x,y\in C$
 \end_inset
 
@@ -1316,11 +1820,265 @@ Next suppose that
 \end_layout
 
 \begin_layout Section*
-Problem 9
+Problem 9 
+\end_layout
+
+\begin_layout Standard
+Let f be given as defined and consider 
+\begin_inset Formula $epi(f)$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $epi(f)$
+\end_inset
+
+ is convex; we would like to show that 
+\begin_inset Formula $f$
+\end_inset
+
+ is convex.
+ So let some 
+\begin_inset Formula $x_{1},x_{2}\in dom(f)$
+\end_inset
+
+ be given.
+ Now let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given and 
+\begin_inset Formula $\lambda f(x_{1})+(1-\lambda)f(x_{2})$
+\end_inset
+
+.
+ We know that 
+\begin_inset Formula $(x_{1},f(x_{1})),(x_{2},f(x_{2}))\in epi(f)$
+\end_inset
+
+ since 
+\begin_inset Formula $f(x_{1})\leq f(x_{1}),f(x_{2})\leq f(x_{2})$
+\end_inset
+
+, and because it is convex, we know that 
+\begin_inset Formula $\lambda(x_{1},f(x_{1}))+(1-\lambda)(x_{2},f(x_{2}))\in epi(f)$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $\lambda(x_{1},f(x_{1}))+(1-\lambda)(x_{2},f(x_{2}))=(\lambda x_{1},\lambda f(x_{1}))+((1-\lambda)x_{2},(1-\lambda)f(x_{2}))=(\lambda x_{1}+(1-\lambda)x_{2},\lambda f(x_{1})+(1-\lambda)f(x_{2}))\in epi(f)$
+\end_inset
+
+.
+ By definition of 
+\begin_inset Formula $epi(f)$
+\end_inset
+
+, this implies that 
+\begin_inset Formula $\lambda x_{1}+(1-\lambda)x_{2}\in dom(f)$
+\end_inset
+
+ and thus 
+\begin_inset Formula $\lambda f(x_{1})+(1-\lambda)f(x_{2}))\geq f(\lambda x_{1}+(1-\lambda)x_{2})$
+\end_inset
+
+.
+ Whence, because 
+\begin_inset Formula $x_{1},x_{2}\in dom(f),\lambda\in[0,1]$
+\end_inset
+
+ were arbitrary, it follows that f itself is convex.
+\end_layout
+
+\begin_layout Standard
+Suppose now that 
+\begin_inset Formula $f$
+\end_inset
+
+ is convex; we would like to show that 
+\begin_inset Formula $epi(f)$
+\end_inset
+
+ is convex.
+ So let some 
+\begin_inset Formula $(x_{1},\mu_{1}),(x_{2},\mu_{2})\in epi(f)$
+\end_inset
+
+ be given.
+ Now let some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given.
+ By the definition of 
+\begin_inset Formula $epi(f)$
+\end_inset
+
+, we know that 
+\begin_inset Formula $f(x_{1})\leq\mu_{1},f(x_{2})\leq\mu_{2}$
+\end_inset
+
+.
+ Now consider 
+\begin_inset Formula $\lambda(x_{1},\mu_{1})+(1-\lambda)(x_{2},\mu_{2})=(\lambda x_{1}+(1-\lambda)x_{2},\lambda\mu_{1}+(1-\lambda)\mu_{2})$
+\end_inset
+
+ Because f is convex, we know that 
+\begin_inset Formula $\lambda x_{1}+(1-\lambda)x_{2}\in dom(f)$
+\end_inset
+
+ and, furthermore, that 
+\begin_inset Formula $\lambda f(x_{1})+(1-\lambda)f(x_{2}))\geq f(\lambda x_{1}+(1-\lambda)x_{2})$
+\end_inset
+
+.
+ But we also know that 
+\begin_inset Formula $\lambda f(x_{1})+(1-\lambda)f(x_{2}))\leq\lambda\mu_{1}+(1-\lambda)\mu_{2}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\lambda\mu_{1}+(1-\lambda)\mu_{2}\geq\lambda f(x_{1})+(1-\lambda)f(x_{2}))\geq f(\lambda x_{1}+(1-\lambda)x_{2})$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\lambda x_{1}+(1-\lambda)x_{2}\in dom(f)$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\mu_{1}+(1-\lambda)\mu_{2}\geq f(\lambda x_{1}+(1-\lambda)x_{2})$
+\end_inset
+
+, we know that 
+\begin_inset Formula $(\lambda x_{1}+(1-\lambda)x_{2},\lambda\mu_{1}+(1-\lambda)\mu_{2})\in epi(f)$
+\end_inset
+
+ by definition of 
+\begin_inset Formula $epi(f)$
+\end_inset
+
+.
+ Hence, since 
+\begin_inset Formula $(x_{1},\mu_{1}),(x_{2},\mu_{2})\in epi(f),\lambda\in[0,1]$
+\end_inset
+
+ were arbitrary, it follows that 
+\begin_inset Formula $epi(f)$
+\end_inset
+
+ itself is convex.
+\end_layout
+
+\begin_layout Standard
+Overall, we have shown that 
+\begin_inset Formula $f$
+\end_inset
+
+ is convex iff 
+\begin_inset Formula $epi(f)$
+\end_inset
+
+ is convex.
 \end_layout
 
 \begin_layout Section*
 Problem 10
+\end_layout
+
+\begin_layout Subsection*
+1)
+\end_layout
+
+\begin_layout Standard
+Let some function 
+\begin_inset Formula $f$
+\end_inset
+
+ be given and suppose that f is convex.
+ Let some 
+\begin_inset Formula $c$
+\end_inset
+
+ be given and consider 
+\begin_inset Formula $S=\{x|f(x)\leq c\}$
+\end_inset
+
+.
+ (Note 
+\begin_inset Formula $S=\emptyset$
+\end_inset
+
+ is convex, so we assume nonempty).
+ Let some 
+\begin_inset Formula $x_{1},x_{2}\in S$
+\end_inset
+
+ and some 
+\begin_inset Formula $\lambda\in[0,1]$
+\end_inset
+
+ be given.
+ By the definition of D, we know that 
+\begin_inset Formula $f(x_{1})\leq c,f(x_{2})\leq c$
+\end_inset
+
+.
+ Because f is convex, we know that 
+\begin_inset Formula $\lambda f(x_{1})+(1-\lambda)f(x_{2})\geq f(\lambda x_{1}+(1-\lambda)x_{2})$
+\end_inset
+
+.
+ But then 
+\begin_inset Formula $\lambda c+(1-\lambda)c=c\geq\lambda f(x_{1})+(1-\lambda)f(x_{2})$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $c\geq\lambda f(x_{1})+(1-\lambda)f(x_{2})\geq f(\lambda x_{1}+(1-\lambda)x_{2})$
+\end_inset
+
+.
+ Hence, we see that 
+\begin_inset Formula $c\geq f(\lambda x_{1}+(1-\lambda)x_{2})$
+\end_inset
+
+ and thus 
+\begin_inset Formula $\lambda x_{1}+(1-\lambda)x_{2}\in S$
+\end_inset
+
+.
+ Hence, since 
+\begin_inset Formula $x_{1},x_{2}\in S,\lambda\in[0,1],$
+\end_inset
+
+ were arbitrary, it follows that 
+\begin_inset Formula $S$
+\end_inset
+
+ itself is convex, for any 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+2)
+\end_layout
+
+\begin_layout Standard
+Converse: Counterexample 
+\begin_inset Formula $f(x)=x^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The convex sets are only formed on the domain (here, x) so they fail to
+ capture the function's own behavior, particularly when the function is
+ monotonically increasing.
 \end_layout
 
 \begin_layout Section*
