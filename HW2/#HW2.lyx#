@@ -465,11 +465,7 @@ For
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-Overall, this implies that 
+ Overall, this implies that 
 \begin_inset Formula $D(x_{0}+\alpha_{n}v_{n})\leq d$
 \end_inset
 
@@ -704,7 +700,71 @@ is feasible in I, we know that
 \begin_layout Standard
 Now suppose that I is false.
  We would like to show that exactly one of IIa,IIb is true.
- If IIa is true, we are done, so suppose that IIa is false.
+ So suppose that IIa is true.
+ That is, we can choose 
+\begin_inset Formula $y^{*}\geq0$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $A^{T}y^{*}=b$
+\end_inset
+
+ and 
+\begin_inset Formula $c^{T}y^{*}\leq\beta$
+\end_inset
+
+.
+ Consider the LP: min 
+\begin_inset Formula $c^{T}y$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $A^{T}y=b,y\geq0$
+\end_inset
+
+.
+ The dual to this problem is: max 
+\begin_inset Formula $b^{T}x$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $Ax\leq c$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ free.
+ Because the primal problem is feasible at 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+, the dual must either be feasible or infeasible (not unbounded).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall y\geq0$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $A^{T}y=0$
+\end_inset
+
+, 
+\begin_inset Formula $c^{T}y\not<0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Now suppose that IIa is false.
  That is, we cannot choose 
 \begin_inset Formula $y\geq0$
 \end_inset
@@ -719,7 +779,7 @@ Now suppose that I is false.
 \end_inset
 
 .
- We want to show that IIb is true.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -827,7 +887,7 @@ Consider the LP: min
 \end_inset
 
  since I is false; hence, the dual LP is feasible but bounded above.
- Hence, the primal LP must be feasible but also not unbounded.
+ Hence, the primal LP must be feasible.
  But we know then, since IIa is false, that 
 \begin_inset Formula $\forall y$
 \end_inset
@@ -1738,6 +1798,7 @@ For
 \end_inset
 
  from our result in C.
+ If
 \end_layout
 
 \end_body

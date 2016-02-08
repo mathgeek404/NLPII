@@ -76,6 +76,449 @@ Sahit Mandala
 Problem 1
 \end_layout
 
+\begin_layout Standard
+Let 
+\begin_inset Formula $C=\{x|Dx\leq d,Gx=g\}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{0}\in C$
+\end_inset
+
+ be given with active set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Consider the tangent cone 
+\begin_inset Formula $T_{C}(x_{0})$
+\end_inset
+
+ and define 
+\begin_inset Formula $S=\{z|D_{A}z\leq0,Gz=0\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+To show 
+\begin_inset Formula $T_{C}(x_{0})=S$
+\end_inset
+
+, first let some 
+\begin_inset Formula $v\in T_{C}(x_{0})$
+\end_inset
+
+ be given.
+ That is, we can choose some sequence 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ s.t.
+ for some 
+\begin_inset Formula $\alpha_{n}>0\rightarrow0$
+\end_inset
+
+, the sequence 
+\begin_inset Formula $x_{0}+\alpha_{n}v_{n}\in C$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{n}\rightarrow v$
+\end_inset
+
+.
+ Now let some 
+\begin_inset Formula $i\in A$
+\end_inset
+
+ be given.
+ Then we know that 
+\begin_inset Formula $D_{i}x_{0}=d_{i}$
+\end_inset
+
+.
+ Notice that 
+\begin_inset Formula $D_{i}(x_{0}+\alpha_{n}v_{n})=D_{i}x_{0}+\alpha_{n}D_{i}v_{n}=d_{i}+\alpha_{n}D_{i}v_{n}\leq d_{i}$
+\end_inset
+
+, so 
+\begin_inset Formula $\alpha_{n}D_{i}v_{n}\leq0$
+\end_inset
+
+, which can only be true for arbitrary n if 
+\begin_inset Formula $D_{i}v_{n}\leq0$
+\end_inset
+
+ since 
+\begin_inset Formula $\alpha_{n}>0$
+\end_inset
+
+.
+ Hence, in the limit, we see that 
+\begin_inset Formula $D_{i}v_{n}\leq0\rightarrow D_{i}v\leq0$
+\end_inset
+
+.
+ And because 
+\begin_inset Formula $i\in A$
+\end_inset
+
+ was arbitary, we see that 
+\begin_inset Formula $D_{A}v\leq0$
+\end_inset
+
+.
+ Next, notice that 
+\begin_inset Formula $Gx_{0}=g$
+\end_inset
+
+ and that 
+\begin_inset Formula $G(x_{0}+\alpha_{n}v_{n})=Gx_{0}+\alpha_{n}Gv_{n}=g$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\alpha_{n}Gv_{n}=0$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $Gv_{n}=0$
+\end_inset
+
+ for arbitrary n since 
+\begin_inset Formula $\alpha_{n}>0$
+\end_inset
+
+.
+ Hence, in the limit, 
+\begin_inset Formula $Gv_{n}=0\rightarrow Gv=0$
+\end_inset
+
+.
+ Overall, we have shown that 
+\begin_inset Formula $v\in S$
+\end_inset
+
+ and thus 
+\begin_inset Formula $T_{C}(x_{0})\subseteq S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now let some element 
+\begin_inset Formula $z\in S$
+\end_inset
+
+ be given.
+ So 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $D_{A}z\leq0,Gz=0$
+\end_inset
+
+.
+ Consider the following 2 cases:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 1
+\series default
+: 
+\begin_inset Formula $D=D_{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, we then have that 
+\begin_inset Formula $D_{A}z=Dz\leq0$
+\end_inset
+
+.
+ So then 
+\begin_inset Formula $D(x_{0}+z)=Dx_{0}+Dz$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $D_{A}=D$
+\end_inset
+
+, we know that 
+\begin_inset Formula $Dx_{0}=d$
+\end_inset
+
+ and thus 
+\begin_inset Formula $Dx_{0}+Dz=d+Dz\leq d$
+\end_inset
+
+.
+ We see that setting 
+\begin_inset Formula $z_{n}=z$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{n}=\frac{1}{n}$
+\end_inset
+
+ suffices as sequences s.t.
+ 
+\begin_inset Formula $x_{0}+\alpha_{n}z_{n}\in C$
+\end_inset
+
+ since 
+\begin_inset Formula $D(x_{0}+\frac{1}{n}z)=Dx_{0}+\frac{1}{n}Dz=d+\frac{1}{n}Dz\leq d$
+\end_inset
+
+ since 
+\begin_inset Formula $Dz\leq0\rightarrow\frac{1}{n}Dz\leq0$
+\end_inset
+
+; furthermore, 
+\begin_inset Formula $G(x_{0}+\frac{1}{n}z)=Gx_{0}+\frac{1}{n}Gz=g+\frac{1}{n}0=g$
+\end_inset
+
+, showing that 
+\begin_inset Formula $x_{0}+\alpha_{n}z_{n}\in C$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $z_{n}=z\rightarrow z$
+\end_inset
+
+ trivially, this shows that 
+\begin_inset Formula $z\in T_{C}(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 2
+\series default
+: 
+\begin_inset Formula $D\neq D_{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, there exists some nonempty set 
+\begin_inset Formula $B$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\forall i\in B$
+\end_inset
+
+, 
+\begin_inset Formula $D_{i}x_{0}\neq d_{i}$
+\end_inset
+
+.
+ But because 
+\begin_inset Formula $Dx_{0}\leq d$
+\end_inset
+
+, this implies that 
+\begin_inset Formula $D_{i}x_{0}<d_{i}$
+\end_inset
+
+, so 
+\begin_inset Formula $d_{i}-D_{i}x_{0}>0$
+\end_inset
+
+.
+ So let us set 
+\begin_inset Formula $r=min{}_{i\in B}(d_{i}-D_{i}x_{0})$
+\end_inset
+
+ and 
+\begin_inset Formula $s=max_{i\in B}(|D_{i}z|)$
+\end_inset
+
+, which clearly satisfies 
+\begin_inset Formula $r,s>0$
+\end_inset
+
+, so 
+\begin_inset Formula $\frac{r}{s}>0$
+\end_inset
+
+.
+ To show that 
+\begin_inset Formula $z\in T_{C}(x_{0})$
+\end_inset
+
+, it suffices to show that 
+\begin_inset Formula $\frac{r}{s}z\in T_{C}(x_{0})$
+\end_inset
+
+ since 
+\begin_inset Formula $T_{C}(x_{0})$
+\end_inset
+
+ is a cone.
+ Consider the sequences 
+\begin_inset Formula $\alpha_{n}=\frac{1}{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{n}=\frac{r}{s}z$
+\end_inset
+
+.
+ Notice that, for 
+\begin_inset Formula $i\in A$
+\end_inset
+
+, 
+\begin_inset Formula $D_{i}z\leq0$
+\end_inset
+
+ so 
+\begin_inset Formula $D_{i}(\frac{r}{s}z)=\frac{r}{s}Dz\leq0$
+\end_inset
+
+; hence, 
+\begin_inset Formula $D_{i}(x_{0}+\alpha_{n}v_{n})=D_{i}x_{0}+\frac{1}{n}\frac{r}{s}D_{i}z=d_{i}+\frac{1}{n}\frac{r}{s}D_{i}z\leq d_{i}+\frac{1}{n}\frac{r}{s}(0)=d_{i}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $D_{i}(x_{0}+\alpha_{n}v_{n})\leq d_{i}$
+\end_inset
+
+ when 
+\begin_inset Formula $i\in A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $i\in B$
+\end_inset
+
+, consider 
+\begin_inset Formula $D_{i}(x_{0}+\alpha_{n}v_{n})=D_{i}x_{0}+\frac{1}{n}\frac{r}{s}D_{i}z$
+\end_inset
+
+.
+ Note that since 
+\begin_inset Formula $s\geq|D_{i}x_{0}|\geq0$
+\end_inset
+
+, it follows that 
+\begin_inset Formula $\frac{1}{s}D_{i}z\leq1$
+\end_inset
+
+; hence, we see that 
+\begin_inset Formula $D_{i}x_{0}+\frac{1}{n}\frac{r}{s}D_{i}z\leq D_{i}x_{0}+\frac{1}{n}r$
+\end_inset
+
+.
+ Furthermore, we see that 
+\begin_inset Formula $0<r\leq d_{i}-D_{i}x_{0}$
+\end_inset
+
+, so 
+\begin_inset Formula $\frac{1}{n}r\leq d_{i}-D_{i}x_{0}$
+\end_inset
+
+, so 
+\begin_inset Formula $D_{i}x_{0}+\frac{1}{n}r\leq D_{i}x_{0}+d_{i}-D_{i}x_{0}=d_{i}$
+\end_inset
+
+.
+ Chaining these inequalities together, we see that 
+\begin_inset Formula $D_{i}(x_{0}+\alpha_{n}v_{n})\leq d_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $i\in B$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Overall, this implies that 
+\begin_inset Formula $D(x_{0}+\alpha_{n}v_{n})\leq d$
+\end_inset
+
+.
+ Furthermore, we see that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $G(x_{0}+\alpha_{n}v_{n})=Gx_{0}+\frac{1}{n}\frac{r}{s}Gz=g+\frac{1}{n}\frac{r}{s}0=g$
+\end_inset
+
+, since 
+\begin_inset Formula $Gx_{0}=g,Gz=0$
+\end_inset
+
+.
+ Overall, this shows that 
+\begin_inset Formula $(x_{0}+\alpha_{n}v_{n})$
+\end_inset
+
+ and thus 
+\begin_inset Formula $v_{n}\rightarrow\frac{r}{s}z\in T_{C}(x_{0})$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $z$
+\end_inset
+
+ must also be in 
+\begin_inset Formula $T_{C}(x_{0})$
+\end_inset
+
+, so 
+\begin_inset Formula $S\subseteq T_{C}(x_{0})$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section*
 Problem 2
 \end_layout
@@ -261,71 +704,7 @@ is feasible in I, we know that
 \begin_layout Standard
 Now suppose that I is false.
  We would like to show that exactly one of IIa,IIb is true.
- So suppose that IIa is true.
- That is, we can choose 
-\begin_inset Formula $y^{*}\geq0$
-\end_inset
-
- s.t.
- 
-\begin_inset Formula $A^{T}y^{*}=b$
-\end_inset
-
- and 
-\begin_inset Formula $c^{T}y^{*}\leq\beta$
-\end_inset
-
-.
- Consider the LP: min 
-\begin_inset Formula $c^{T}y$
-\end_inset
-
- s.t.
- 
-\begin_inset Formula $A^{T}y=b,y\geq0$
-\end_inset
-
-.
- The dual to this problem is: max 
-\begin_inset Formula $b^{T}x$
-\end_inset
-
- s.t.
- 
-\begin_inset Formula $Ax\leq c$
-\end_inset
-
-, 
-\begin_inset Formula $x$
-\end_inset
-
- free.
- Because the primal problem is feasible at 
-\begin_inset Formula $y^{*}$
-\end_inset
-
-, the dual must either be feasible or infeasible (not unbounded).
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\forall y\geq0$
-\end_inset
-
- s.t.
- 
-\begin_inset Formula $A^{T}y=0$
-\end_inset
-
-, 
-\begin_inset Formula $c^{T}y\not<0$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-Now suppose that IIa is false.
+ If IIa is true, we are done, so suppose that IIa is false.
  That is, we cannot choose 
 \begin_inset Formula $y\geq0$
 \end_inset
@@ -340,7 +719,7 @@ Now suppose that IIa is false.
 \end_inset
 
 .
- 
+ We want to show that IIb is true.
 \end_layout
 
 \begin_layout Standard
@@ -558,14 +937,13 @@ min
 \uwave off
 \noun off
 \color none
-) must be unbounded.
- That is, we can choose some 
-\begin_inset Formula $\alpha<0$
+) must be unbounded (in the 
+\begin_inset Formula $-\infty$
 \end_inset
 
- s.t.
- 
-\begin_inset Formula $\exists y$
+ direction).
+ That is, we can choose some 
+\begin_inset Formula $y$
 \end_inset
 
  s.t.
@@ -582,7 +960,7 @@ min
 \noun default
 \color inherit
 
-\begin_inset Formula $c^{T}y=\alpha$
+\begin_inset Formula $c^{T}y<0$
 \end_inset
 
  with 
@@ -595,6 +973,771 @@ min
 
 \begin_layout Section*
 Problem 3
+\end_layout
+
+\begin_layout Subsection*
+A)
+\end_layout
+
+\begin_layout Standard
+For the point 
+\begin_inset Formula $0$
+\end_inset
+
+, the tangent cone would be any points 
+\bar under
+
+\begin_inset Formula $u$
+\end_inset
+
+
+\bar default
+ such that 
+\begin_inset Formula $\exists$
+\end_inset
+
+ sequences 
+\begin_inset Formula $u_{k}\rightarrow u,\alpha_{k}\downarrow0$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x+\alpha_{k}u_{k}=\alpha_{k}u_{k}\in\Omega$
+\end_inset
+
+.
+ Notice that this set 
+\begin_inset Formula $\Omega\subseteq\mathbb{R}$
+\end_inset
+
+.
+ In this space, the tangent cone would be a subset of this space.
+ 
+\end_layout
+
+\begin_layout Standard
+First, notice that for 
+\begin_inset Formula $u_{k}=0,\alpha_{k}\downarrow0$
+\end_inset
+
+, every k satisfies 
+\begin_inset Formula $\alpha_{k}u_{k}=0\in\Omega$
+\end_inset
+
+, so clearly 
+\begin_inset Formula $u_{k}\rightarrow0\in T_{\Omega}(0)$
+\end_inset
+
+.
+ So let some point 
+\begin_inset Formula $x\in\mathbb{R},x\neq0$
+\end_inset
+
+ be given and set 
+\begin_inset Formula $u_{k}=x$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $x$
+\end_inset
+
+ is positive, we can then choose 
+\begin_inset Formula $\alpha_{k}:=\frac{1}{x}\frac{1}{k\pi}>0$
+\end_inset
+
+.
+ Clearly, as 
+\begin_inset Formula $k\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{k}\rightarrow0$
+\end_inset
+
+.
+ Notice that for arbitrary 
+\begin_inset Formula $k\in\mathbb{Z}^{+}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{k}u_{k}=\frac{1}{x}\frac{1}{k\pi}*x=\frac{1}{k\pi}\in\Omega$
+\end_inset
+
+.
+ Hence, it follows that 
+\begin_inset Formula $u_{k}\rightarrow x\in T_{\Omega}(0)$
+\end_inset
+
+.
+ For negative 
+\begin_inset Formula $x$
+\end_inset
+
+, we can choose 
+\begin_inset Formula $\alpha_{k}:=\frac{1}{x}\frac{1}{(-k)\pi}>0$
+\end_inset
+
+ and we see that the same argument holds since for 
+\begin_inset Formula $k\in\mathbb{Z}^{+},\alpha_{k}u_{k}=\frac{1}{x}\frac{1}{-k\pi}*x=\frac{1}{-k\pi}\in\Omega$
+\end_inset
+
+, implying that 
+\begin_inset Formula $x\in T_{\Omega}(0)$
+\end_inset
+
+.
+ But this implies that 
+\begin_inset Formula $\mathbb{R}\subseteq\Omega$
+\end_inset
+
+, so 
+\begin_inset Formula $\mathbb{R}=\Omega$
+\end_inset
+
+.
+ In this case, the normal cone (that is, the set of points which make a
+ negative inner product with 
+\begin_inset Formula $T_{\Omega}(0)$
+\end_inset
+
+) would just be y s.t.
+ 
+\begin_inset Formula $y*x\leq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+.
+ But the only choice would be a y s.t.
+ y is nonnegative (e.g.
+ 
+\begin_inset Formula $y*-1\leq0$
+\end_inset
+
+) and nonpositive (e.g.
+ 
+\begin_inset Formula $y*1\leq0$
+\end_inset
+
+), which is only satisfied by 0.
+ So the normal cone is just: 
+\begin_inset Formula $\{0\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+B)
+\end_layout
+
+\begin_layout Standard
+Let some 
+\begin_inset Formula $x\in\Omega$
+\end_inset
+
+ be given s.t.
+ 
+\begin_inset Formula $x\ne0$
+\end_inset
+
+.
+ Then we can choose 
+\begin_inset Formula $j\in\mathbb{Z},j\neq0$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x=\frac{1}{j\pi}$
+\end_inset
+
+.
+ I claim that the tangent cone 
+\begin_inset Formula $T_{\Omega}(x)=\{0\}$
+\end_inset
+
+.
+ First, notice that for 
+\begin_inset Formula $u_{n}=0,\alpha_{n}\downarrow0$
+\end_inset
+
+, every n satisfies 
+\begin_inset Formula $x+\alpha_{n}u_{n}=x+0=x\in\Omega$
+\end_inset
+
+, so clearly 
+\begin_inset Formula $u_{n}\rightarrow0\in T_{\Omega}(x)$
+\end_inset
+
+.
+ Now let some 
+\begin_inset Formula $u\in\mathbb{R},u\neq0$
+\end_inset
+
+ be given.
+ Suppose 
+\begin_inset Formula $u\in T_{\Omega}(x)$
+\end_inset
+
+, so that we may choose a 
+\begin_inset Formula $u_{n}\rightarrow u,\alpha_{n}\downarrow0$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x+\alpha_{n}u_{n}\in\Omega$
+\end_inset
+
+ for all n.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 1:
+\series default
+ As edge cases, consider 
+\begin_inset Formula $j=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Then set 
+\begin_inset Formula $\epsilon=\frac{1}{2\pi}$
+\end_inset
+
+.
+ Now choose some 
+\begin_inset Formula $k$
+\end_inset
+
+ large enough s.t.
+ 
+\begin_inset Formula $|u_{k}-u|<|u|$
+\end_inset
+
+ (making 
+\begin_inset Formula $u_{k}\neq0$
+\end_inset
+
+ since u is nonzero) and 
+\begin_inset Formula $|(x+\alpha_{k}u_{k})-x|<\frac{1}{2\pi}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\frac{1}{2\pi}=\frac{1}{\pi}-\frac{1}{2\pi}=x-\frac{1}{2\pi}<(x+\alpha_{k}u_{k})<x+\frac{1}{2\pi}=\frac{1}{\pi}+\frac{1}{2\pi}=\frac{3}{2\pi}$
+\end_inset
+
+.
+ But we know that 
+\begin_inset Formula $(x+\alpha_{k}u_{k})\in\Omega$
+\end_inset
+
+.
+ But the only 
+\begin_inset Formula $x+\alpha_{k}u_{k}\in\Omega$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\frac{1}{2\pi}<(x+\alpha_{k}u_{k})<\frac{3}{2\pi}$
+\end_inset
+
+ is 
+\begin_inset Formula $x+\alpha_{k}u_{k}=\frac{1}{\pi}$
+\end_inset
+
+.
+ But this implies that either 
+\begin_inset Formula $\alpha_{k}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $u_{k}=0$
+\end_inset
+
+, a contradiction.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 2:
+\series default
+ Now consider 
+\begin_inset Formula $j=-1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Then set 
+\begin_inset Formula $\epsilon=\frac{1}{2\pi}$
+\end_inset
+
+.
+ Now choose some 
+\begin_inset Formula $k$
+\end_inset
+
+ large enough s.t.
+ 
+\begin_inset Formula $|u_{k}-u|<|u|$
+\end_inset
+
+ (making 
+\begin_inset Formula $u_{k}\neq0$
+\end_inset
+
+ since u is nonzero) and 
+\begin_inset Formula $|(x+\alpha_{k}u_{k})-x|=|(x+\alpha_{k}u_{k})-\frac{1}{\pi}|<\frac{1}{2\pi}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\frac{-3}{2\pi}=-\frac{1}{\pi}-\frac{1}{2\pi}<(x+\alpha_{k}u_{k})<-\frac{1}{\pi}+\frac{1}{2\pi}=-\frac{1}{2\pi}$
+\end_inset
+
+.
+ But we know that 
+\begin_inset Formula $(x+\alpha_{k}u_{k})\in\Omega$
+\end_inset
+
+.
+ But the only 
+\begin_inset Formula $x+\alpha_{k}u_{k}\in\Omega$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\frac{-3}{2\pi}<(x+\alpha_{k}u_{k})<-\frac{1}{2\pi}$
+\end_inset
+
+ is 
+\begin_inset Formula $x+\alpha_{k}u_{k}=-\frac{1}{\pi}$
+\end_inset
+
+.
+ But this implies that either 
+\begin_inset Formula $\alpha_{k}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $u_{k}=0$
+\end_inset
+
+, a contradiction.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 3:
+\series default
+ If j is positive (excluding the case 
+\begin_inset Formula $j=1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Set 
+\begin_inset Formula $\epsilon=\frac{1}{j\pi}-\frac{1}{(j+1)\pi}>0$
+\end_inset
+
+ Because 
+\begin_inset Formula $u_{n}\rightarrow u,\alpha_{n}\downarrow0$
+\end_inset
+
+, we know 
+\begin_inset Formula $x+\alpha_{n}u_{n}\rightarrow x$
+\end_inset
+
+ so can choose some 
+\begin_inset Formula $k$
+\end_inset
+
+ large enough s.t.
+ 
+\begin_inset Formula $|u_{k}-u|<|u|$
+\end_inset
+
+ (making 
+\begin_inset Formula $u_{k}\neq0$
+\end_inset
+
+ since u is nonzero) and 
+\begin_inset Formula $|(x+\alpha_{k}u_{k})-x|<\frac{1}{j\pi}-\frac{1}{(j+1)\pi}$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $x+-\frac{1}{j\pi}+\frac{1}{(j+1)\pi}<(x+\alpha_{k}u_{k})<x+\frac{1}{j\pi}-\frac{1}{(j+1)\pi}$
+\end_inset
+
+.
+ We can also choose We know that 
+\begin_inset Formula $x+\alpha_{k}u_{k}\in\Omega$
+\end_inset
+
+.
+ Notice that: 
+\begin_inset Formula $x+-\frac{1}{j\pi}+\frac{1}{(j+1)\pi}=\frac{1}{j\pi}-\frac{1}{j\pi}+\frac{1}{(j+1)\pi}=\frac{1}{(j+1)\pi}<(x+\alpha_{k}u_{k})<x+\frac{1}{j\pi}-\frac{1}{(j+1)\pi}=\frac{2}{j\pi}-\frac{1}{(j+1)\pi}=\frac{j+2}{j(j+1)\pi}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+ Notice however that 
+\begin_inset Formula $\frac{j+2}{j(j+1)\pi}\leq\frac{1}{j-1\pi}$
+\end_inset
+
+ since 
+\begin_inset Formula $(j+2)(j-1)\pi=\pi(j^{2}+j-2)\leq\pi(j^{2}+j)=j(j+1)\pi$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{1}{(j+1)\pi}<(x+\alpha_{k}u_{k})<\frac{1}{j-1\pi}$
+\end_inset
+
+.
+ However, this is impossible since the the only element 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\frac{1}{(j+1)\pi}<\omega<\frac{1}{j-1\pi}$
+\end_inset
+
+ is 
+\begin_inset Formula $\omega=\frac{1}{j\pi}$
+\end_inset
+
+ (for any other 
+\begin_inset Formula $k\in\mathbb{Z},k\neq0$
+\end_inset
+
+, either 
+\begin_inset Formula $k\leq j-1$
+\end_inset
+
+ which makes 
+\begin_inset Formula $\frac{1}{k\pi}\geq\frac{1}{(j-1)\pi}$
+\end_inset
+
+ or 
+\begin_inset Formula $k\geq j+1$
+\end_inset
+
+ which makes 
+\begin_inset Formula $\frac{1}{k\pi}\leq\frac{1}{(j+1)\pi}$
+\end_inset
+
+).
+ But this implies 
+\begin_inset Formula $\alpha_{k}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $u_{k}=0$
+\end_inset
+
+, a contradiction.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Case 4:
+\series default
+ If j is negative (excluding the case 
+\begin_inset Formula $j=-1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Set 
+\begin_inset Formula $\epsilon=\frac{1}{(j-1)\pi}-\frac{1}{j\pi}>0$
+\end_inset
+
+ Because 
+\begin_inset Formula $u_{n}\rightarrow u,\alpha_{n}\downarrow0$
+\end_inset
+
+, we know 
+\begin_inset Formula $x+\alpha_{n}u_{n}\rightarrow x$
+\end_inset
+
+ so can choose some 
+\begin_inset Formula $k$
+\end_inset
+
+ large enough s.t.
+ 
+\begin_inset Formula $|u_{k}-u|<|u|$
+\end_inset
+
+ (making 
+\begin_inset Formula $u_{k}\neq0$
+\end_inset
+
+ since u is nonzero) and 
+\begin_inset Formula $|(x+\alpha_{k}u_{k})-x|<\frac{1}{(j-1)\pi}-\frac{1}{j\pi}$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $x+\frac{1}{j\pi}-\frac{1}{(j-1)\pi}<(x+\alpha_{k}u_{k})<x+\frac{1}{(j-1)\pi}-\frac{1}{j\pi}$
+\end_inset
+
+.
+ We can also choose We know that 
+\begin_inset Formula $x+\alpha_{k}u_{k}\in\Omega$
+\end_inset
+
+ for 
+\begin_inset Formula $k\geq K$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Notice that: 
+\begin_inset Formula $\frac{2}{j\pi}-\frac{1}{(j-1)\pi}=\frac{j-2}{j(j-1)\pi}<(x+\alpha_{k}u_{k})<\frac{1}{(j-1)\pi}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+ Notice however that 
+\begin_inset Formula $\frac{1}{(j+1)\pi}\leq\frac{j-2}{j(j-1)\pi}$
+\end_inset
+
+ since 
+\begin_inset Formula $j(j-1)\pi=\pi(j^{2}-j)\leq\pi(j^{2}-j-2)=(j-2)(j+1)\pi$
+\end_inset
+
+, s0 
+\begin_inset Formula $\frac{1}{(j+1)\pi}<(x+\alpha_{k}u_{k})<\frac{1}{(j-1)\pi}$
+\end_inset
+
+.
+ However, this is impossible since the the only element 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\frac{1}{(j+1)\pi}<\omega<\frac{1}{j-1\pi}$
+\end_inset
+
+ is 
+\begin_inset Formula $\omega=\frac{1}{j\pi}$
+\end_inset
+
+.
+ But this implies 
+\begin_inset Formula $\alpha_{k}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $u_{k}=0$
+\end_inset
+
+, a contradiction.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Hence, our assumption was false and we have shown that 
+\begin_inset Formula $u\not\in T_{\Omega}(x)$
+\end_inset
+
+ by creating an open interval around x in which no elements of 
+\begin_inset Formula $x+\alpha_{n}u_{n}$
+\end_inset
+
+ exist.
+ This shows that the tangent cone is in fact only 
+\begin_inset Formula $T_{\Omega}(x)=\{0\}$
+\end_inset
+
+.
+ The normal cone is 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ since 
+\begin_inset Formula $\forall x\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $x*0\leq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+C)
+\end_layout
+
+\begin_layout Standard
+We assume that f is smooth implies that it is differentiable.
+ For 
+\begin_inset Formula $0$
+\end_inset
+
+ to be a local solution, one necessary condition is denoted by theorem 12.3.
+ That is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(0)^{T}d\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $d\in T_{\Omega}(0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+From our above results, we saw that 
+\begin_inset Formula $T_{\Omega}(0)=\mathbb{R}$
+\end_inset
+
+.
+ This implies that 
+\begin_inset Formula $\nabla f(0)^{T}d=\nabla f(0)*(-1)\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\nabla f(0)^{T}d=\nabla f(0)*(1)\geq0$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\nabla f(0)=0$
+\end_inset
+
+ is neccesary by theorem 12.3
+\end_layout
+
+\begin_layout Subsection*
+D)
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+ to be a local solution, it must satisfy theorem 12.3: 
+\begin_inset Formula $\nabla f(x)^{T}d\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $d\in T_{\Omega}(x)$
+\end_inset
+
+.
+ For these x, recall that 
+\begin_inset Formula $T_{\Omega}(x)=\{0\}$
+\end_inset
+
+, so for any 
+\begin_inset Formula $d\in T_{\Omega}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $\nabla f(x)^{T}d=\nabla f(x)*0=0\geq0$
+\end_inset
+
+.
+ So the gradient at any of these points are not restricted by theorem 12.3.
+ In fact, regardless of f, we can construct an open ball 
+\begin_inset Formula $Ball_{\epsilon}(x)$
+\end_inset
+
+ around each x using our choices for 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ from (B) s.t.
+ 
+\begin_inset Formula $\{x\}=Ball_{\epsilon}(x)\cap\Omega$
+\end_inset
+
+.
+ Then, within this neighborhood, 
+\begin_inset Formula $f(x)\leq f(y),\forall y\in Ball_{\epsilon}(x)\cap\Omega=\{x\}$
+\end_inset
+
+ so x is a local minimum.
+ So every 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+ is naturally a local minimum.
+ However, for 
+\begin_inset Formula $x=0$
+\end_inset
+
+ to not be a local solution, it suffices for 
+\begin_inset Formula $\nabla f(x)\neq0$
+\end_inset
+
+ from our result in C.
 \end_layout
 
 \end_body
