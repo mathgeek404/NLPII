@@ -841,7 +841,70 @@ for all
 \begin_inset Formula $n\leq m$
 \end_inset
 
- dimensional space, we know that these vectors must be linearly dependent.
+ dimensional space, we know that these vectors must be linearly dependent
+ (assumes 
+\begin_inset Formula $n\leq m$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+The last gradient 
+\begin_inset Formula $\nabla g(x^{*})^{T}h(x^{*})=\nabla\sum_{i\in\{1,...,m\}}g_{i}(x^{*})h_{i}(x^{*})=\sum_{i\in\{1,...,m\}}\nabla(g_{i}(x^{*})h_{i}(x^{*}))=\sum_{i\in\{1,...,m\}}\nabla g_{i}(x^{*})h_{i}(x^{*})+g_{i}(x^{*})\nabla h_{i}(x^{*})\in S$
+\end_inset
+
+.
+ Since either 
+\begin_inset Formula $h_{i}(x^{*})=0$
+\end_inset
+
+ or 
+\begin_inset Formula $g_{i}(x^{*})=0$
+\end_inset
+
+, we know that either 
+\begin_inset Formula $\nabla g_{i}(x^{*})h_{i}(x^{*})+g_{i}(x^{*})\nabla h_{i}(x^{*})=g_{i}(x^{*})\nabla h_{i}(x^{*})$
+\end_inset
+
+ or 
+\begin_inset Formula $\nabla g_{i}(x^{*})h_{i}(x^{*})+g_{i}(x^{*})\nabla h_{i}(x^{*})=\nabla g_{i}(x^{*})h_{i}(x^{*})$
+\end_inset
+
+ respectively (for any i).
+ If 
+\begin_inset Formula $h_{i}(x^{*})=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\nabla h_{i}(x^{*})\in S$
+\end_inset
+
+, so 
+\begin_inset Formula $\nabla h_{i}(x^{*})$
+\end_inset
+
+ and 
+\begin_inset Formula $\nabla g_{i}(x^{*})h_{i}(x^{*})+g_{i}(x^{*})\nabla h_{i}(x^{*})$
+\end_inset
+
+ are linearly dependent (with factor 
+\begin_inset Formula $g(x^{*})$
+\end_inset
+
+.
+ Similarly if 
+\begin_inset Formula $g(x^{*})=0$
+\end_inset
+
+.
+ So each term can be written as a linear combination of vectors in S, and
+ thus the sum 
+\begin_inset Formula $\nabla g(x^{*})^{T}h(x^{*})=\sum_{i\in\{1,...,m\}}\nabla g_{i}(x^{*})h_{i}(x^{*})+g_{i}(x^{*})\nabla h_{i}(x^{*})$
+\end_inset
+
+ is linearly dependent on the other vectors in S.
+ Hence, we see (in a more general case) that S is linearly dependent.
 \end_layout
 
 \begin_layout Section*
