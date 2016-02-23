@@ -1,0 +1,260 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.5in
+\topmargin 0.5in
+\rightmargin 0.5in
+\bottommargin 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Homework 4
+\end_layout
+
+\begin_layout Author
+Sahit Mandala
+\end_layout
+
+\begin_layout Section*
+Problem 1
+\end_layout
+
+\begin_layout Standard
+In our current iteration k with given 
+\begin_inset Formula $x^{*},\lambda^{*}$
+\end_inset
+
+, the Lagrangian can be written as 
+\begin_inset Formula $\nabla L_{xx}(x^{*},\lambda^{*})=\nabla f_{k}-A_{k}^{T}\lambda^{*}$
+\end_inset
+
+.
+ If we substitute this into the original objective function (
+\begin_inset Formula $f_{k}+\nabla f_{k}^{T}p+\frac{1}{2}p^{T}\nabla L_{xx}(x^{*},\lambda^{*})p)$
+\end_inset
+
+ for 
+\begin_inset Formula $\nabla f_{k}^{T}p$
+\end_inset
+
+, we see that 
+\begin_inset Formula $f_{k}+\nabla L_{xx}(x^{*},\lambda^{*})^{T}p+\frac{1}{2}p^{T}\nabla L_{xx}(x^{*},\lambda^{*})p=f_{k}+(\nabla f_{k}-A_{k}^{T}\lambda^{*})^{T}p+\frac{1}{2}p^{T}\nabla L_{xx}(x^{*},\lambda^{*})p=$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{k}+\nabla f_{k}^{T}p-(A_{k}^{T}\lambda^{*})^{T}p+\frac{1}{2}p^{T}\nabla L_{xx}(x^{*},\lambda^{*})p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that 
+\begin_inset Formula $-(A_{k}^{T}\lambda^{*})^{T}p=-(\lambda^{*})^{T}(A_{k}^{T})^{T}p=-(\lambda^{*})^{T}A_{k}p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But we know that 
+\begin_inset Formula $A_{k}p+c_{k}=0$
+\end_inset
+
+ from the first constraint in the problem, so 
+\begin_inset Formula $A_{k}p=-c_{k}$
+\end_inset
+
+ and thus 
+\begin_inset Formula $-(\lambda^{*})^{T}A_{k}p=-(\lambda^{*})^{T}-c_{k}=(\lambda^{*})^{T}c_{k}$
+\end_inset
+
+.
+ But this is merely a constant (say, 
+\begin_inset Formula $r=(\lambda^{*})^{T}c_{k}$
+\end_inset
+
+) since 
+\begin_inset Formula $\lambda^{*},c_{k}$
+\end_inset
+
+ are both given.
+ So 
+\begin_inset Formula $f_{k}+\nabla f_{k}^{T}p-(A_{k}^{T}\lambda^{*})^{T}p+\frac{1}{2}p^{T}\nabla^{2}L_{xx}(x^{*},\lambda^{*})p=f_{k}+\nabla f_{k}^{T}p+r+\frac{1}{2}p^{T}\nabla^{2}L_{xx}(x^{*},\lambda^{*})p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But the problem of minimizing this objective is the same as minimizing this
+ objective without the constant, so min 
+\begin_inset Formula $f_{k}+\nabla f_{k}^{T}p+r+\frac{1}{2}p^{T}\nabla^{2}L_{xx}(x^{*},\lambda^{*})p$
+\end_inset
+
+ 
+\begin_inset Formula $\cong$
+\end_inset
+
+ min 
+\begin_inset Formula $f_{k}+\nabla f_{k}^{T}p+\frac{1}{2}p^{T}\nabla^{2}L_{xx}(x^{*},\lambda^{*})p=f_{k}+\nabla L_{xx}(x^{*},\lambda^{*})^{T}p+\frac{1}{2}p^{T}\nabla^{2}L_{xx}(x^{*},\lambda^{*})p$
+\end_inset
+
+.
+ Hence, we have shown that the original problem with 
+\begin_inset Formula $\nabla f_{k}^{T}p$
+\end_inset
+
+ is equivalent to the problem with 
+\begin_inset Formula $f_{k}+\nabla L_{xx}(x^{*},\lambda^{*})^{T}p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Problem 2
+\end_layout
+
+\begin_layout Standard
+Because 
+\begin_inset Formula $f,c$
+\end_inset
+
+ are twice Lipchitz differentiable, then 
+\begin_inset Formula $\nabla f,\nabla c_{i}$
+\end_inset
+
+ are Lipshitz differentiable.
+ So then 
+\begin_inset Formula $A(x)^{T}\lambda=\sum c_{i}(x)\lambda_{i}$
+\end_inset
+
+ is also Lipshitz differentiable as the product of 2 Lipshitz differentiable
+ functions.
+ So then 
+\begin_inset Formula $F(x,\lambda)$
+\end_inset
+
+ is Lipshitz differentiable as the sums and products of these terms.
+\end_layout
+
+\begin_layout Standard
+System:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{bmatrix}\nabla_{xx}^{2}L_{k} & -A_{k}^{T}\\
+A_{k} & 0
+\end{bmatrix}\begin{bmatrix}p_{x}\\
+p_{\lambda}
+\end{bmatrix}=\begin{bmatrix}-\nabla f_{k}+A_{k}^{T}\lambda_{k}\\
+-c_{k}
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So then 
+\end_layout
+
+\begin_layout Section*
+Problem 3
+\end_layout
+
+\begin_layout Section*
+Problem 4
+\end_layout
+
+\begin_layout Standard
+Precalculate gradients and create functions
+\end_layout
+
+\begin_layout Section*
+Problem 5
+\end_layout
+
+\begin_layout Standard
+Consider 
+\begin_inset Formula $c(x)=x_{1}^{2}+x_{2}^{2}-1$
+\end_inset
+
+.
+ For the given constraint we see that the gradient is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{k}=A_{k}(x)=[\nabla c(x)]^{T}=\begin{bmatrix}2x_{1} & 2x_{2}\end{bmatrix}$
+\end_inset
+
+ , 
+\begin_inset Formula $c_{k}=c(x_{k})=x_{1}^{2}+x_{2}^{2}-1$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
