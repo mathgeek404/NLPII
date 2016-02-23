@@ -1,0 +1,8 @@
+function [] =  local_sqp(f,c,x, initial_x, initial_lam)
+
+syms x y z
+f = x*y + 2*z*x;
+
+loc_sqp
+
+hessian(f,[x,y,z])
