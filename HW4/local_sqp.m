@@ -1,4 +1,23 @@
 function [] =  local_sqp(f,c,x,lam, initial_x, initial_lam)
+	
+	grad_f = gradient(f)
 	A = jacobian(c,x)
-	H = hessian(f,[x,lam])
+
+	F = [gradient(f,x)-A'*lam, c(x)]
+	Fj = jacobian(F)
+	
+	xk = initial_x
+	lk = initial_lam
+	
+	while (true):
+		Fk = subs(Fj,[xk,lk])
+		grad_fk = subs(grad_f,xk)
+		ck = subs(c,xk)
+		sol = inv(Fk)*-[Fk, ck]
+		xk = xk + sol[1:5,1]
+		lk = lk + sol[6:8,1]
+		print(xk)
+		print(lk)
+	end
+	
 end
