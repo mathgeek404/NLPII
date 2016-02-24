@@ -281,30 +281,17 @@ By the implicit function theorem, we see that we can choose some open set
 
 .
  
-\end_layout
-
-\begin_layout Standard
-To show that this point in a local minimizer, we must show the next necessary
- condition that 
-\begin_inset Formula $\nabla^{2}P_{\mu}(x)$
-\end_inset
-
- is positive semidefinite at this point.
- Notice that (using 
-\begin_inset Formula $x=z_{x}(\sigma),\lambda=z_{\lambda}(\sigma)=-\frac{1}{\sigma}c(x)$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\nabla^{2}P_{\mu}(x)=\nabla^{2}f(x)+\frac{1}{\sigma}\sum_{i=1}^{m}\nabla c_{i}(x)\nabla c_{i}(x)+\frac{1}{\sigma}\sum_{i=1}^{m}c_{i}(x)\nabla^{2}c_{i}(x)=\nabla_{xx}^{2}L_{\sigma}(x,\lambda)+\frac{1}{\sigma}\sum_{i=1}^{m}\nabla c_{i}(x)\nabla c_{i}(x)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
 We also see that 
 \begin_inset Formula $h(z(0),0)=0$
 \end_inset
@@ -335,6 +322,191 @@ We also see that
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+To show that this point in a local minimizer, we must show the next necessary
+ condition that 
+\begin_inset Formula $\nabla^{2}P_{\mu}(x)$
+\end_inset
+
+ is positive semidefinite at this point.
+ Notice that (using 
+\begin_inset Formula $x=z_{x}(\sigma),\lambda=z_{\lambda}(\sigma)=-\frac{1}{\sigma}c(x)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla^{2}P_{\mu}(x)=\nabla^{2}f(x)+\frac{1}{\sigma}\sum_{i=1}^{m}\nabla c_{i}(x)^{T}\nabla c_{i}(x)+\frac{1}{\sigma}\sum_{i=1}^{m}c_{i}(x)\nabla^{2}c_{i}(x)=\nabla_{xx}^{2}L_{\sigma}(x,\lambda)+\frac{1}{\sigma}A(x)^{T}A(x)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Let some 
+\begin_inset Formula $y$
+\end_inset
+
+ be given and consider 
+\begin_inset Formula $y^{T}\nabla^{2}P_{\mu}(x)y=y^{T}\nabla_{xx}^{2}L_{\sigma}(x,\lambda)y+\frac{1}{\sigma}y^{T}A(x)^{T}A(x)y$
+\end_inset
+
+.
+ Notice that as 
+\begin_inset Formula $\sigma\rightarrow0$
+\end_inset
+
+, 
+\begin_inset Formula $\nabla_{xx}^{2}L_{\sigma}(x,\lambda)\rightarrow\nabla_{xx}^{2}L_{\sigma}(x^{*},\lambda^{*})$
+\end_inset
+
+ since 
+\begin_inset Formula $x=z_{x}(\sigma)\rightarrow x^{*},\lambda=z_{\lambda}(\sigma)=-\frac{1}{\sigma}c(x)\rightarrow\lambda^{*}$
+\end_inset
+
+.
+ We know that 
+\begin_inset Formula $\nabla_{xx}^{2}L_{\sigma}(x^{*},\lambda^{*})$
+\end_inset
+
+ has strictly positive eigenvalues by the 2nd order conditions, so we can
+ set 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ as the smallest eigenvalue of 
+\begin_inset Formula $\nabla_{xx}^{2}L_{\sigma}(x^{*},\lambda^{*})$
+\end_inset
+
+.
+ Since convergent matricies are convergent in their eigenvalues, for sufficientl
+y small 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, we can make 
+\begin_inset Formula $\nabla_{xx}^{2}L_{\sigma}(x,\lambda)$
+\end_inset
+
+ s.t.
+ the each eigenvalue of 
+\begin_inset Formula $\nabla_{xx}^{2}L_{\sigma}(x,\lambda)$
+\end_inset
+
+ is within 
+\begin_inset Formula $\frac{\epsilon}{2}$
+\end_inset
+
+ of some eigenvalue of 
+\begin_inset Formula $\nabla_{xx}^{2}L_{\sigma}(x^{*},\lambda^{*})$
+\end_inset
+
+, and since 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is the smallest of all of those, this guarantees that 
+\begin_inset Formula $\nabla_{xx}^{2}L_{\sigma}(x,\lambda)$
+\end_inset
+
+ is positive semidefinite.
+ Next, consider 
+\begin_inset Formula $y^{T}\frac{1}{\sigma}A(x)^{T}A(x)y$
+\end_inset
+
+.
+ Note that because 
+\begin_inset Formula $A(x)^{T}A(x)$
+\end_inset
+
+ is symmetric, it readily follows that it has positive eigenvalues and thus
+ is positive semidefinite.
+ So then 
+\begin_inset Formula $\frac{1}{\sigma}A(x)^{T}A(x)$
+\end_inset
+
+ is clearly also positive semidefinite for 
+\begin_inset Formula $\sigma>0$
+\end_inset
+
+.
+ So then the sum of these 2 positive semidefinite matricies is also positive
+ semidefinite, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\nabla^{2}P_{\mu}(x)$
+\end_inset
+
+.
+ Hence, we have shown that 
+\begin_inset Formula $\nabla^{2}P_{\mu}(x)$
+\end_inset
+
+ is positive semidefinite for sufficiently small 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, and coupled with the above results showing 
+\begin_inset Formula $\nabla P_{\mu}(z_{x}(\sigma))=0$
+\end_inset
+
+ as well as 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\sigma\rightarrow0$
+\end_inset
+
+, 
+\begin_inset Formula $z_{x}(\sigma)\rightarrow x^{*},z_{\lambda}(\sigma)\rightarrow\lambda^{*}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+, we have shown that that these points are local minimizers and there exists
+ such a local minimizer in a neighborhood of 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ for a given 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ small enough.
+ 
 \end_layout
 
 \begin_layout Section*
