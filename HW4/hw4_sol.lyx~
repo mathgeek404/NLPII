@@ -77,6 +77,271 @@ Problem 1
 \end_layout
 
 \begin_layout Standard
+Consider the NLP as given with solution and unique Lagrange multipliers
+ (by LICQ) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x^{*},\lambda^{*}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ and consider the unconstrainted problem indicated by the quadratic penalty
+ function 
+\begin_inset Formula $P_{\sigma}(x):=f(x)+\frac{1}{2\sigma}\sum_{i=1}^{m}c_{i}^{2}(x)$
+\end_inset
+
+.
+ Since we are searching for a local minimizer for this function, we know
+ that such a solution 
+\begin_inset Formula $x_{k}^{*}$
+\end_inset
+
+ must satisfy 
+\begin_inset Formula $\nabla P_{\mu}(x_{k}^{*})=0$
+\end_inset
+
+.
+ Some calculus shows that 
+\begin_inset Formula $\nabla P_{\mu}(x)=\nabla f(x)+\frac{1}{2\sigma}\sum_{i=1}^{m}\nabla c_{i}^{2}(x)=\nabla f(x)+\frac{1}{2\sigma}\sum_{i=1}^{m}2c_{i}(x)\nabla c_{i}(x)=\nabla f(x)+\frac{1}{\sigma}\sum_{i=1}^{m}c_{i}(x)\nabla c_{i}(x)=\nabla f(x)+\frac{1}{\sigma}c(x)^{T}A(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consider 
+\begin_inset Formula $h(x,\lambda,\sigma)=\begin{bmatrix}\nabla f(x)-A(x)^{T}\lambda\\
+-c(x)-\sigma\lambda
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that for 
+\begin_inset Formula $x^{*},\lambda^{*},\sigma=0$
+\end_inset
+
+ that 
+\begin_inset Formula $h(x^{*},\lambda^{*},0)=\begin{bmatrix}\nabla f(x^{*})-A(x^{*})^{T}\lambda\\
+-c(x^{*})
+\end{bmatrix}=0$
+\end_inset
+
+ by the KKT conditions on the original NLP.
+ We also know that 
+\begin_inset Formula $F(x,\lambda,\sigma)=\begin{bmatrix}\nabla f(x)-A(x)^{T}\lambda\\
+-c(x)-\sigma\lambda
+\end{bmatrix}$
+\end_inset
+
+ is continuously differentiable in some neighborhood of 
+\begin_inset Formula $[x^{*};\lambda^{*};0]$
+\end_inset
+
+ since 
+\begin_inset Formula $\nabla f(x),c(x),\lambda$
+\end_inset
+
+ are all continuously differentiable in some neighborhood of 
+\begin_inset Formula $[x^{*};\lambda^{*};0]$
+\end_inset
+
+.
+ We also see that 
+\begin_inset Formula $\nabla_{x,\lambda}h(x,\lambda,\sigma)=\begin{bmatrix}\nabla_{xx}^{2}L(x^{*},\lambda^{*}) & -A(x)^{T}\\
+-A(x) & -\sigma I
+\end{bmatrix}$
+\end_inset
+
+, noting that 
+\begin_inset Formula $\nabla_{xx}^{2}L(x^{*},\lambda^{*})=\nabla^{2}f(x^{*})-\nabla A(x^{*})^{T}\lambda$
+\end_inset
+
+.
+ We know that 
+\begin_inset Formula $\nabla_{x,\lambda}h(x,\lambda,0)=\begin{bmatrix}\nabla_{xx}^{2}L(x^{*},\lambda^{*}) & -A(x^{*})^{T}\\
+-A(x^{*}) & 0
+\end{bmatrix}$
+\end_inset
+
+ is nonsingular since assumption 18.2 holds at 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ with Lagrange multipliers 
+\begin_inset Formula $\lambda^{*}$
+\end_inset
+
+ (assumption 18.2 follows from LICQ and the second order conditions) from
+ which it follows that it is nonsingular.
+\end_layout
+
+\begin_layout Standard
+By the implicit function theorem, we see that we can choose some open set
+ 
+\begin_inset Formula $N_{x}$
+\end_inset
+
+ around 
+\begin_inset Formula $[x^{*};\lambda^{*}]$
+\end_inset
+
+, 
+\begin_inset Formula $N_{\sigma}$
+\end_inset
+
+ around 
+\begin_inset Formula $\sigma=0$
+\end_inset
+
+, and some function continuous 
+\begin_inset Formula $z:N_{\sigma}\rightarrow N_{x}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $h(z(t),t)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in N_{\mu}$
+\end_inset
+
+ (we can say that 
+\begin_inset Formula $z(\sigma)=[z_{x}(\sigma);z_{\lambda}(\sigma)]$
+\end_inset
+
+).
+ For these 
+\begin_inset Formula $\sigma\in N_{\sigma}$
+\end_inset
+
+, we see that 
+\begin_inset Formula $h(z(\sigma),\sigma)=\begin{bmatrix}\nabla f(z_{x}(\sigma))-A(z_{x}(\sigma))^{T}z_{\lambda}(\sigma)\\
+-c(z_{x}(\sigma))-\sigma z_{\lambda}(\sigma)
+\end{bmatrix}=0$
+\end_inset
+
+.
+ Note that this implies that 
+\begin_inset Formula $-c(z_{x}(\sigma))-\sigma z_{\lambda}(\sigma)=0$
+\end_inset
+
+, or equivalently, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $-\frac{1}{\sigma}c(z_{x}(\sigma))=z_{\lambda}(\sigma)$
+\end_inset
+
+.
+ So for a given 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, the point 
+\begin_inset Formula $z_{x}(\sigma),z_{\lambda}(\sigma)$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $\nabla P_{\sigma}=\nabla f(z_{x}(\sigma))+\frac{1}{\sigma}c(z_{x}(\sigma))^{T}A(z_{x}(\sigma))=\nabla f(z_{x}(\sigma))+(-z_{\lambda}(\sigma))^{T}A(z_{x}(\sigma))=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+To show that this point in a local minimizer, we must show the next necessary
+ condition that 
+\begin_inset Formula $\nabla^{2}P_{\mu}(x)$
+\end_inset
+
+ is positive semidefinite at this point.
+ Notice that (using 
+\begin_inset Formula $x=z_{x}(\sigma),\lambda=z_{\lambda}(\sigma)=-\frac{1}{\sigma}c(x)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla^{2}P_{\mu}(x)=\nabla^{2}f(x)+\frac{1}{\sigma}\sum_{i=1}^{m}\nabla c_{i}(x)\nabla c_{i}(x)+\frac{1}{\sigma}\sum_{i=1}^{m}c_{i}(x)\nabla^{2}c_{i}(x)=\nabla_{xx}^{2}L_{\sigma}(x,\lambda)+\frac{1}{\sigma}\sum_{i=1}^{m}\nabla c_{i}(x)\nabla c_{i}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We also see that 
+\begin_inset Formula $h(z(0),0)=0$
+\end_inset
+
+, which is true only when 
+\begin_inset Formula $z(0)=[x^{*};\lambda^{*}]$
+\end_inset
+
+, so by the continuity of z, as 
+\begin_inset Formula $\sigma\rightarrow0$
+\end_inset
+
+, 
+\begin_inset Formula $z_{x}(\sigma)\rightarrow x^{*},z_{\lambda}(\sigma)\rightarrow\lambda^{*}$
+\end_inset
+
+.
+ Hence, we see that for sufficiently small 
+\begin_inset Formula $\sigma>0$
+\end_inset
+
+, a minimizer for 
+\begin_inset Formula $P_{\sigma}$
+\end_inset
+
+ will be within the neighborhood of 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Problem 2
+\end_layout
+
+\begin_layout Standard
 In our current iteration k with given 
 \begin_inset Formula $x^{*},\lambda^{*}$
 \end_inset
@@ -173,42 +438,48 @@ But the problem of minimizing this objective is the same as minimizing this
 \end_layout
 
 \begin_layout Section*
-Problem 2
+Problem 3
 \end_layout
 
 \begin_layout Standard
-Because 
-\begin_inset Formula $f,c$
+First, we shall notice that algorithm 18.1 is structure based upon algorithm
+ 11.1.
+ We consider 
+\begin_inset Formula $x_{k}'=\begin{bmatrix}x_{k}\\
+\lambda_{k}
+\end{bmatrix}$
 \end_inset
 
- are twice Lipchitz differentiable, then 
-\begin_inset Formula $\nabla f,\nabla c_{i}$
+ as our variable with 
+\begin_inset Formula $x_{0}'=\begin{bmatrix}x_{0}\\
+\lambda_{0}
+\end{bmatrix}$
 \end_inset
 
- are Lipshitz differentiable.
- So then 
-\begin_inset Formula $A(x)^{T}\lambda=\sum c_{i}(x)\lambda_{i}$
+.
+ We note that given the formulation of 
+\begin_inset Formula $l_{k}$
 \end_inset
 
- is also Lipshitz differentiable as the product of 2 Lipshitz differentiable
- functions.
- So then 
-\begin_inset Formula $F(x,\lambda)$
+ and 
+\begin_inset Formula $\lambda_{k}$
 \end_inset
 
- is Lipshitz differentiable as the sums and products of these terms.
-\end_layout
+, we see that 
+\begin_inset Formula $\lambda_{k+1}=\lambda_{k}+p_{\lambda}$
+\end_inset
 
-\begin_layout Standard
-System:
+ from the formulation in 18.6.
+ Then the body of the loop in algorithm 18.1 amounts to solving a linear
+ system of the form:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $\begin{bmatrix}\nabla_{xx}^{2}L_{k} & -A_{k}^{T}\\
 A_{k} & 0
-\end{bmatrix}\begin{bmatrix}p_{x}\\
-p_{\lambda}
-\end{bmatrix}=\begin{bmatrix}-\nabla f_{k}+A_{k}^{T}\lambda_{k}\\
+\end{bmatrix}\begin{bmatrix}p_{k}\\
+\lambda_{k+1}
+\end{bmatrix}=\begin{bmatrix}-\nabla f_{k}\\
 -c_{k}
 \end{bmatrix}$
 \end_inset
@@ -217,11 +488,153 @@ p_{\lambda}
 \end_layout
 
 \begin_layout Standard
-So then 
+But this is equivalent to solving the following problem with the substitution
+ for 
+\begin_inset Formula $\lambda_{k+1}=\lambda_{k}+p_{\lambda}$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Section*
-Problem 3
+\begin_layout Standard
+\begin_inset Formula $\begin{bmatrix}\nabla_{xx}^{2}L_{k} & -A_{k}^{T}\\
+A_{k} & 0
+\end{bmatrix}\begin{bmatrix}p_{k}\\
+p_{\lambda}
+\end{bmatrix}=J(x_{k}')\begin{bmatrix}p_{k}\\
+p_{\lambda}
+\end{bmatrix}=r(x_{k}')=\begin{bmatrix}-\nabla f_{k}+A_{k}^{T}\lambda_{k}\\
+-c_{k}
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After solving this linear equation for a solution 
+\begin_inset Formula $\begin{bmatrix}p_{k}\\
+p_{\lambda}
+\end{bmatrix}$
+\end_inset
+
+, we see that 
+\begin_inset Formula $x_{k+1}\leftarrow x_{k}+p_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{k+1}\leftarrow\lambda_{k}+p_{\lambda}$
+\end_inset
+
+ for the variable 
+\begin_inset Formula $x_{k}'=\begin{bmatrix}x_{k+1}\\
+\lambda_{k+1}
+\end{bmatrix}$
+\end_inset
+
+, after which we repeat the process.
+ This formulates the algorithm equivalently to Newton's algorithm in 11.1.
+\end_layout
+
+\begin_layout Standard
+We next note that because assumption 18.2 holds, we know that the Jacobian
+ 
+\begin_inset Formula $A(x)$
+\end_inset
+
+ has full row rank and that 
+\begin_inset Formula $\nabla_{xx}^{2}L_{k}$
+\end_inset
+
+ is positive definite on the tangent space of constraints.
+ This implies that the matrix 
+\begin_inset Formula $J(x_{k}')$
+\end_inset
+
+ above is nonsingular.
+ We also know that the solution 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ to the original NLP has some unique Lagrange multipliers 
+\begin_inset Formula $\lambda^{*}$
+\end_inset
+
+ (by LICQ) satisfying 
+\begin_inset Formula $r(\begin{bmatrix}x^{*}\\
+\lambda^{*}
+\end{bmatrix})=0$
+\end_inset
+
+ since 
+\begin_inset Formula $r(\begin{bmatrix}x^{*}\\
+\lambda^{*}
+\end{bmatrix})=\begin{bmatrix}-\nabla f_{k}(x^{*})+A_{k}^{T}\lambda\\
+-c_{k}(x^{*})
+\end{bmatrix}=\begin{bmatrix}0\\
+0
+\end{bmatrix}$
+\end_inset
+
+ by the KKT conditions and constraints.
+ So if 
+\begin_inset Formula $\{x_{k}'\}$
+\end_inset
+
+ are within some neighborhood of 
+\begin_inset Formula $\begin{bmatrix}x^{*}\\
+\lambda^{*}
+\end{bmatrix}$
+\end_inset
+
+, our algorithm will converge to some solution in some Q-superlinear time
+ by theorem 11.2.
+ 
+\end_layout
+
+\begin_layout Standard
+Because 
+\begin_inset Formula $f,c$
+\end_inset
+
+ are twice Lipchitz differentiable near 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $\nabla f,\nabla c_{i}$
+\end_inset
+
+ are Lipshitz continuously differentiable.
+ So then 
+\begin_inset Formula $A_{k}^{T}\lambda_{k}$
+\end_inset
+
+ is also Lipshitz continuously differentiable (product and sum of Lipshitz
+ continuously differentiable functions).
+ So overall 
+\begin_inset Formula $r(x_{k}')=\begin{bmatrix}-\nabla f_{k}+A_{k}^{T}\lambda_{k}\\
+-c_{k}
+\end{bmatrix}$
+\end_inset
+
+ is also Lipshitz continuously differentiable (on x and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+) as the sums and differences of these terms.
+ This implies by theorem 11.2 that our algorithm has quadratic convergence
+ if 
+\begin_inset Formula $\{x_{k}'\}$
+\end_inset
+
+ are within some neighborhood of 
+\begin_inset Formula $\begin{bmatrix}x^{*}\\
+\lambda^{*}
+\end{bmatrix}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
@@ -229,7 +642,242 @@ Problem 4
 \end_layout
 
 \begin_layout Standard
-Precalculate gradients and create functions
+Program code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% Homework 4
+\end_layout
+
+\begin_layout Plain Layout
+
+% Problem 4
+\end_layout
+
+\begin_layout Plain Layout
+
+answer = [-1.71, 1.59, 1.82, -0.763, -0.763]'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Variables
+\end_layout
+
+\begin_layout Plain Layout
+
+x = sym('x',[5,1])
+\end_layout
+
+\begin_layout Plain Layout
+
+l = sym('l',[3,1]) %num constraints
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Initial choices
+\end_layout
+
+\begin_layout Plain Layout
+
+x_initial = [-1.8, 1.7, 1.9, -0.8, -0.8]'
+\end_layout
+
+\begin_layout Plain Layout
+
+l_initial = [1,-1,1]'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+f = exp(x(1,1)*x(2,1)*x(3,1)*x(4,1)*x(5,1))-(0.5)*(x(1,1)^3+x(2,1)^3+1)^2
+\end_layout
+
+\begin_layout Plain Layout
+
+c1 = x(1,1)^2+x(2,1)^2+x(3,1)^2+x(4,1)^2+x(5,1)^2-10
+\end_layout
+
+\begin_layout Plain Layout
+
+c2 = x(2,1)*x(3,1)-5*x(4,1)*x(5,1)
+\end_layout
+
+\begin_layout Plain Layout
+
+c3 = x(1,1)^3+x(2,1)^3+1
+\end_layout
+
+\begin_layout Plain Layout
+
+c = [c1;c2;c3]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Algo 18.1
+\end_layout
+
+\begin_layout Plain Layout
+
+%Find symbolic components
+\end_layout
+
+\begin_layout Plain Layout
+
+grad_f = gradient(f)
+\end_layout
+
+\begin_layout Plain Layout
+
+A = jacobian(c,x)
+\end_layout
+
+\begin_layout Plain Layout
+
+F = [gradient(f,x)-A'*l; c];
+\end_layout
+
+\begin_layout Plain Layout
+
+Fj = jacobian(F,[x;l])
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Setup
+\end_layout
+
+\begin_layout Plain Layout
+
+xk = x_initial;
+\end_layout
+
+\begin_layout Plain Layout
+
+lk = l_initial;
+\end_layout
+
+\begin_layout Plain Layout
+
+old_sol= [1;2;3;4;5;6;7;8]
+\end_layout
+
+\begin_layout Plain Layout
+
+sol = [8;7;6;5;4;3;2;1]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%No convergence test specified, chose a simple norm heuristic
+\end_layout
+
+\begin_layout Plain Layout
+
+while norm(sol-old_sol) > 1*10^-8
+\end_layout
+
+\begin_layout Plain Layout
+
+  old_sol = sol  
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  Fk = double(subs(Fj,[x;l],[xk;lk]));
+\end_layout
+
+\begin_layout Plain Layout
+
+  grad_fk = double(subs(grad_f,x,xk));
+\end_layout
+
+\begin_layout Plain Layout
+
+  ck = double(subs(c,x,xk));
+\end_layout
+
+\begin_layout Plain Layout
+
+  sol = inv(Fk)*-[grad_fk; ck] %SOlve linear eqn
+\end_layout
+
+\begin_layout Plain Layout
+
+  xk = xk + sol(1:5,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+  lk = sol(6:8,1);
+\end_layout
+
+\begin_layout Plain Layout
+
+  i=i+1;
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+xk
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -242,15 +890,133 @@ Consider
 \end_inset
 
 .
- For the given constraint we see that the gradient is:
+ For the given constraint we see that the Jacobian is:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $A_{k}=A_{k}(x)=[\nabla c(x)]^{T}=\begin{bmatrix}2x_{1} & 2x_{2}\end{bmatrix}$
+\begin_inset Formula $A_{k}=A(x_{k})=[\nabla c(x)]^{T}=\begin{bmatrix}2x_{1} & 2x_{2}\end{bmatrix}$
 \end_inset
 
  , 
 \begin_inset Formula $c_{k}=c(x_{k})=x_{1}^{2}+x_{2}^{2}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So we can evaluate this at the following points:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(0,0)^{T}$
+\end_inset
+
+: 
+\begin_inset Formula $A_{k}=\begin{bmatrix}0 & 0\end{bmatrix},c_{k}=0+0-1=-1\rightarrow$
+\end_inset
+
+
+\begin_inset Formula $A_{k}p+c_{k}=\begin{bmatrix}0 & 0\end{bmatrix}p-1=-1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(0,1)^{T}$
+\end_inset
+
+: 
+\begin_inset Formula $A_{k}=\begin{bmatrix}0 & 2\end{bmatrix},c_{k}=0+2^{2}-1=3\rightarrow$
+\end_inset
+
+
+\begin_inset Formula $A_{k}p+c_{k}=\begin{bmatrix}0 & 2\end{bmatrix}p+3=2p_{2}+3=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(0.1,0.02)^{T}$
+\end_inset
+
+: 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $A_{k}=\begin{bmatrix}0.2 & 0.04\end{bmatrix},c_{k}=0.1^{2}+0.02^{2}-1=0.0104-1=-0.9896\rightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{k}p+c_{k}=\begin{bmatrix}0.2 & 0.04\end{bmatrix}p-0.9896=0.2p_{1}+0.04p_{2}-0.9896=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(-0.1,0.02)^{T}$
+\end_inset
+
+: 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $A_{k}=\begin{bmatrix}-0.2 & -0.04\end{bmatrix},c_{k}=(-0.1)^{2}+(-0.02)^{2}-1=0.0104-1=-0.9896\rightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{k}p+c_{k}=\begin{bmatrix}-0.2 & -0.04\end{bmatrix}p-0.9896=0.2p_{1}-0.04p_{2}-0.9896=0$
 \end_inset
 
 
