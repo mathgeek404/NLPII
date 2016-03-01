@@ -3,8 +3,7 @@
 answer = [-1, -1]'
 
 %Variables
-x = sym('x',[5,1])
-l = sym('l',[3,1]) %num constraints
+x = sym('x',[1,1])
 
 %Initial choices
 x_initial = [0,0]'
