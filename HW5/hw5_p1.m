@@ -3,7 +3,7 @@
 answer = [-1, -1]'
 
 %Variables
-x = sym('x',[1,1])
+x = sym('x',[2,1])
 
 %Initial choices
 x_initial = [0,0]'
