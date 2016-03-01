@@ -34,16 +34,15 @@ array_mu = [1, 10, 100, 1000]
 for idx = 1:numel(array_mu)
     mu_k = array_mu(idx)
     tolerance = 1/mu_k
-    Q = f -lk'*c+ (mu_k/2)*(c)^2
-    
-    while norm(grad_L) > tolerance
-		hess_Q = double(subs(gradient(Q,x),x,xk));
-		grad_Q = double(subs(hessian(Q,x),x,xk));
+    L = f -lk'*c+ (mu_k/2)*(c)^2
+    grad_L = gradient(L,x)
+    grad_Lk = double(subs(grad_L,x,xk));
+    hess_L = hessian(L,x)
+    while norm(grad_Lk) > tolerance
+		grad_Lk = double(subs(grad_L,x,xk));
+		hess_Lk = double(subs(hess_L,x,xk));
 		sol = -inv(hess_Q)*-grad_Q; %SOlve linear eqn
 		xk = xk + sol;
 	end
-end
-    
     lk = lk - mu_k*double(subs(c,x,xk))
-    
 end
